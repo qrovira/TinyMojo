@@ -1,0 +1,7 @@
+% layout 'default';
+% title 'TinyMojo - URL shortener';
+<h2>URL shortener</h2>
+<form method="POST" action="/do/shorten">
+    <input type="url" name="longurl" placeholder="Enter URL to shorten..."/>
+    <input type="submit" value="Shorten"/>
+</form>

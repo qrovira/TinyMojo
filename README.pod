@@ -1,0 +1,69 @@
+=encoding utf8
+
+=head1 NAME
+
+App::TinyMojo - URL shortener application
+
+=head1 SYNOPSIS
+
+Small proof of concept L<Mojolicious> app for URL shortening.
+
+The approach taken for the shortening relies entirely on the auto_increment
+primary key on the database backend, which avoids all kinds of messy queries
+during shortening or lookup.
+
+To achieve this, the shortening works like follows:
+
+=over
+
+=item 1. Insert to database, and retrieve the auto_increment $id
+
+=item 2. Encrypt the id using L<Crypt::Skip32>
+
+This assumes 32 bit ints as IDs, but you can switch to 64 bits and L<Crypt::Skipjack>.
+
+=item 3. Apply a naive base change using a hardcoded dictionary of URL-friendly characters
+
+=back
+
+The lookup of shortened URLs is prety straight forward given the above method.
+
+=head1 CONFIGURATION
+
+All configuration is done through the default L<Mojolicious::Plugin::Config> plugin,
+which you can see on the F<app-tiny_mojo.conf> file.
+
+There you can set the encryption key (10 bytes), along with the database settings.
+
+=head2 Example configuration
+
+  {
+      database => {
+          dsn      => "dbi:mysql:dbname=tinymojo",
+          username => "tinymojo",
+          password => "tinymojo",
+      },
+      secrets => [
+          'heregoesyoursecret'
+      ],
+      crypt_key => '1234567890',
+  };
+
+=head2 DATABASE
+
+The database only requires a trivial I<url> table with id and longurl fields.
+
+=head2 URL table example (MySQL)
+
+  CREATE TABLE url (
+    id int auto_increment primary key,
+    longurl varchar(4096)
+  );
+
+=head1 CAVEATS
+
+All of them. This is just a proof of concept :)
+
+Do not use on the wild under any circumstances.. it does not check pretty much anything.
+
+=cut

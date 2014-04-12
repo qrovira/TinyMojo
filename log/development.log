@@ -1,0 +1,1097 @@
+[Sat Apr 12 13:42:03 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:42:22 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:42:32 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:42:32 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 13:51:58 2014] [debug] GET "/".
+[Sat Apr 12 13:51:58 2014] [error] Global symbol "$id" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 14.
+syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 29, near "->to_abs )"
+Global symbol "$shorturl" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 31.
+Global symbol "$shorturl" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 32.
+Compilation failed in require at (eval 256) line 1.
+
+[Sat Apr 12 13:51:58 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 13:51:58 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 13:51:58 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 13:51:58 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 13:51:58 2014] [debug] 500 Internal Server Error (0.027492s, 36.374/s).
+[Sat Apr 12 13:52:29 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:52:29 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 13:52:33 2014] [debug] GET "/".
+[Sat Apr 12 13:52:33 2014] [error] syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 29, near "->to_abs )"
+Global symbol "$shorturl" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 31.
+Global symbol "$shorturl" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 32.
+Compilation failed in require at (eval 256) line 1.
+
+[Sat Apr 12 13:52:33 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 13:52:33 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 13:52:33 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 13:52:33 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 13:52:33 2014] [debug] 500 Internal Server Error (0.028554s, 35.021/s).
+[Sat Apr 12 13:56:33 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:56:33 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 13:56:38 2014] [debug] GET "/".
+[Sat Apr 12 13:56:38 2014] [error] syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 29, near "->to_abs )"
+Global symbol "$shorturl" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 31.
+Global symbol "$shorturl" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 32.
+Compilation failed in require at (eval 256) line 1.
+
+[Sat Apr 12 13:56:38 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 13:56:38 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 13:56:38 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 13:56:38 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 13:56:38 2014] [debug] 500 Internal Server Error (0.030401s, 32.894/s).
+[Sat Apr 12 13:56:54 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:56:54 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 13:56:57 2014] [debug] GET "/".
+[Sat Apr 12 13:56:57 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "index".
+[Sat Apr 12 13:56:57 2014] [debug] Action not found in controller.
+[Sat Apr 12 13:56:57 2014] [debug] Rendering template "main/index.html.ep".
+[Sat Apr 12 13:56:57 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 13:56:57 2014] [debug] 200 OK (0.005525s, 180.995/s).
+[Sat Apr 12 13:57:26 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:57:26 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 13:57:27 2014] [debug] GET "/".
+[Sat Apr 12 13:57:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "index".
+[Sat Apr 12 13:57:27 2014] [debug] Action not found in controller.
+[Sat Apr 12 13:57:27 2014] [debug] Rendering template "main/index.html.ep".
+[Sat Apr 12 13:57:27 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 13:57:27 2014] [debug] 200 OK (0.010057s, 99.433/s).
+[Sat Apr 12 13:57:43 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 13:57:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 13:57:43 2014] [error] Can't locate object method "db" via package "App::TinyMojo::Main" at /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2/Mojolicious.pm line 127.
+
+[Sat Apr 12 13:57:43 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 13:57:43 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 13:57:43 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 13:57:43 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 13:57:43 2014] [debug] 500 Internal Server Error (0.027830s, 35.932/s).
+[Sat Apr 12 13:57:53 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 13:57:53 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 13:57:53 2014] [error] Can't locate object method "db" via package "App::TinyMojo::Main" at /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2/Mojolicious.pm line 127.
+
+[Sat Apr 12 13:57:53 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 13:57:53 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 13:57:53 2014] [debug] Rendering cached inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 13:57:53 2014] [debug] Rendering cached inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 13:57:53 2014] [debug] 500 Internal Server Error (0.010147s, 98.551/s).
+[Sat Apr 12 13:58:41 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:59:04 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 13:59:04 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 13:59:06 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 13:59:06 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 13:59:06 2014] [error] install_driver(MySQL) failed: Can't locate DBD/MySQL.pm in @INC (you may need to install the DBD::MySQL module) (@INC contains: /home/quim/workspace/tiny_mojo/script/../lib /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2/x86_64-linux /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2 /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2/x86_64-linux /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2 .) at (eval 259) line 3.
+Perhaps the DBD::MySQL perl module hasn't been fully installed,
+or perhaps the capitalisation of 'MySQL' isn't right.
+Available drivers: DBM, ExampleP, File, Gofer, Proxy, SQLite, Sponge.
+ at /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2/Mojolicious/Plugin/Database.pm line 38.
+
+[Sat Apr 12 13:59:06 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 13:59:06 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 13:59:06 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 13:59:06 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 13:59:06 2014] [debug] 500 Internal Server Error (0.035719s, 27.996/s).
+[Sat Apr 12 14:03:37 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:03:37 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:03:40 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:03:40 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:03:41 2014] [error] install_driver(MySQL) failed: Can't locate DBD/MySQL.pm in @INC (you may need to install the DBD::MySQL module) (@INC contains: /home/quim/workspace/tiny_mojo/script/../lib /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2/x86_64-linux /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2 /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2/x86_64-linux /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2 .) at (eval 259) line 3.
+Perhaps the DBD::MySQL perl module hasn't been fully installed,
+or perhaps the capitalisation of 'MySQL' isn't right.
+Available drivers: DBM, ExampleP, File, Gofer, Proxy, SQLite, Sponge, mysql.
+ at /home/quim/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2/Mojolicious/Plugin/Database.pm line 38.
+
+[Sat Apr 12 14:03:41 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 14:03:41 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 14:03:41 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:03:41 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:03:41 2014] [debug] 500 Internal Server Error (0.032311s, 30.949/s).
+[Sat Apr 12 14:04:07 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:04:07 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:04:10 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:04:10 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:04:10 2014] [error] Can't locate object method "new" via package "Crypto::Skip32" (perhaps you forgot to load "Crypto::Skip32"?) at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 99.
+
+[Sat Apr 12 14:04:10 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 14:04:10 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 14:04:10 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:04:10 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:04:10 2014] [debug] 500 Internal Server Error (0.255462s, 3.914/s).
+[Sat Apr 12 14:04:57 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:04:57 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:05:01 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:05:01 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:05:02 2014] [error] key must be 10 bytes long at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 99.
+
+[Sat Apr 12 14:05:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 14:05:02 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 14:05:02 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:05:02 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:05:02 2014] [debug] 500 Internal Server Error (0.258224s, 3.873/s).
+[Sat Apr 12 14:05:25 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:05:25 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:05:28 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:05:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:05:28 2014] [debug] Rendering template "main/shorten.html.ep".
+[Sat Apr 12 14:05:28 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:05:28 2014] [debug] 200 OK (0.229552s, 4.356/s).
+[Sat Apr 12 14:05:31 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:05:31 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:05:32 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:05:32 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:05:32 2014] [debug] 200 OK (0.209553s, 4.772/s).
+[Sat Apr 12 14:05:33 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:05:33 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:05:33 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:05:33 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:05:33 2014] [debug] 200 OK (0.004894s, 204.332/s).
+[Sat Apr 12 14:05:34 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:05:34 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:05:34 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:05:34 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:05:34 2014] [debug] 200 OK (0.004439s, 225.276/s).
+[Sat Apr 12 14:05:35 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:05:35 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:05:35 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:05:35 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:05:35 2014] [debug] 200 OK (0.177448s, 5.635/s).
+[Sat Apr 12 14:06:36 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:06:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:06:36 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:06:36 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:06:36 2014] [debug] 200 OK (0.208705s, 4.791/s).
+[Sat Apr 12 14:09:03 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:09:03 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:09:03 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:09:03 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:09:03 2014] [debug] 200 OK (0.208683s, 4.792/s).
+[Sat Apr 12 14:09:20 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:09:20 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:09:21 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:09:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:09:22 2014] [debug] Rendering template "main/shorten.html.ep".
+[Sat Apr 12 14:09:22 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:09:22 2014] [debug] 200 OK (0.222328s, 4.498/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.002393s, 417.885/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001642s, 609.013/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001627s, 614.628/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001571s, 636.537/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001574s, 635.324/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001621s, 616.903/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001602s, 624.220/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001563s, 639.795/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001605s, 623.053/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001639s, 610.128/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.000973s, 1027.749/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.000931s, 1074.114/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.000923s, 1083.424/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001309s, 763.942/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001592s, 628.141/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001607s, 622.278/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001606s, 622.665/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001670s, 598.802/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.001678s, 595.948/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.000931s, 1074.114/s).
+[Sat Apr 12 14:09:27 2014] [debug] GET "/b".
+[Sat Apr 12 14:09:27 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:09:27 2014] [debug] 302 Found (0.000940s, 1063.830/s).
+[Sat Apr 12 14:11:09 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:11:09 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.017990s, 55.586/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001601s, 624.610/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001582s, 632.111/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001511s, 661.813/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001543s, 648.088/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001566s, 638.570/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001590s, 628.931/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001586s, 630.517/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001579s, 633.312/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001547s, 646.412/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001526s, 655.308/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001574s, 635.324/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001566s, 638.570/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001613s, 619.963/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001573s, 635.728/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001603s, 623.830/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001561s, 640.615/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001542s, 648.508/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.000924s, 1082.251/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001142s, 875.657/s).
+[Sat Apr 12 14:11:11 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:11 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:11 2014] [debug] 302 Found (0.001333s, 750.188/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001577s, 634.115/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001581s, 632.511/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001556s, 642.674/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001556s, 642.674/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001558s, 641.849/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001586s, 630.517/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001550s, 645.161/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001569s, 637.349/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001551s, 644.745/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001588s, 629.723/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001584s, 631.313/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001540s, 649.351/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001593s, 627.746/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001593s, 627.746/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001562s, 640.205/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001302s, 768.049/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.000961s, 1040.583/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001579s, 633.312/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001575s, 634.921/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001663s, 601.323/s).
+[Sat Apr 12 14:11:14 2014] [debug] GET "/b".
+[Sat Apr 12 14:11:14 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:14 2014] [warn] shorturl request for b.
+[Sat Apr 12 14:11:14 2014] [debug] 302 Found (0.001868s, 535.332/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001970s, 507.614/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.000903s, 1107.420/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.000908s, 1101.322/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001611s, 620.732/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001316s, 759.878/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001412s, 708.215/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001585s, 630.915/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.000903s, 1107.420/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.000926s, 1079.914/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001597s, 626.174/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001534s, 651.890/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001566s, 638.570/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001562s, 640.205/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.000934s, 1070.664/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.000871s, 1148.106/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.000925s, 1081.081/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001086s, 920.810/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001530s, 653.595/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001502s, 665.779/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.001268s, 788.644/s).
+[Sat Apr 12 14:11:28 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:28 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:28 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:28 2014] [debug] 302 Found (0.000906s, 1103.753/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.001726s, 579.374/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.001582s, 632.111/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.001585s, 630.915/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.001585s, 630.915/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000951s, 1051.525/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000889s, 1124.859/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000892s, 1121.076/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000867s, 1153.403/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000920s, 1086.957/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000902s, 1108.647/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000873s, 1145.475/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000918s, 1089.325/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000927s, 1078.749/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000880s, 1136.364/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000917s, 1090.513/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000895s, 1117.318/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000867s, 1153.403/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.000910s, 1098.901/s).
+[Sat Apr 12 14:11:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:39 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:39 2014] [debug] 302 Found (0.001375s, 727.273/s).
+[Sat Apr 12 14:11:40 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:40 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:40 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:40 2014] [debug] 302 Found (0.000929s, 1076.426/s).
+[Sat Apr 12 14:11:40 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:40 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:40 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:40 2014] [debug] 302 Found (0.000930s, 1075.269/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001067s, 937.207/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001598s, 625.782/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.000993s, 1007.049/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001692s, 591.017/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.000954s, 1048.218/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001553s, 643.915/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001547s, 646.412/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001624s, 615.764/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001592s, 628.141/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001614s, 619.579/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001677s, 596.303/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001645s, 607.903/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001572s, 636.132/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001560s, 641.026/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001581s, 632.511/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001610s, 621.118/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001583s, 631.712/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001711s, 584.454/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001603s, 623.830/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.001619s, 617.665/s).
+[Sat Apr 12 14:11:55 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:11:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:11:55 2014] [warn] shorturl request for bdghf.
+[Sat Apr 12 14:11:55 2014] [debug] 302 Found (0.000896s, 1116.071/s).
+[Sat Apr 12 14:12:34 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:12:34 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:12:35 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:35 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:35 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:35 2014] [debug] 302 Found (0.011923s, 83.872/s).
+[Sat Apr 12 14:12:35 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:35 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:35 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000949s, 1053.741/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000922s, 1084.599/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000918s, 1089.325/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000884s, 1131.222/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000888s, 1126.126/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000868s, 1152.074/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000877s, 1140.251/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000878s, 1138.952/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000915s, 1092.896/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000866s, 1154.734/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000877s, 1140.251/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000891s, 1122.334/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000910s, 1098.901/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000908s, 1101.322/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000973s, 1027.749/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.000969s, 1031.992/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.001078s, 927.644/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.001460s, 684.932/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.001534s, 651.890/s).
+[Sat Apr 12 14:12:36 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:12:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:12:36 2014] [debug] shorturl request for bdghf.
+[Sat Apr 12 14:12:36 2014] [debug] 302 Found (0.001571s, 636.537/s).
+[Sat Apr 12 14:13:18 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:13:18 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.019599s, 51.023/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001398s, 715.308/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001617s, 618.429/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001531s, 653.168/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001504s, 664.894/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001583s, 631.712/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001569s, 637.349/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001508s, 663.130/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001550s, 645.161/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001583s, 631.712/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001598s, 625.782/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001493s, 669.792/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001548s, 645.995/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001521s, 657.462/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001550s, 645.161/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001611s, 620.732/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001539s, 649.773/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001659s, 602.773/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001559s, 641.437/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001479s, 676.133/s).
+[Sat Apr 12 14:13:21 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:21 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:21 2014] [debug] 302 Found (0.001626s, 615.006/s).
+[Sat Apr 12 14:13:41 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:13:41 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:13:42 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.015569s, 64.230/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000900s, 1111.111/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.001255s, 796.813/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.001308s, 764.526/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000948s, 1054.852/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.001572s, 636.132/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000888s, 1126.126/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000871s, 1148.106/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000913s, 1095.290/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000920s, 1086.957/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000903s, 1107.420/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000900s, 1111.111/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000869s, 1150.748/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000862s, 1160.093/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000892s, 1121.076/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000935s, 1069.519/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000861s, 1161.440/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000947s, 1055.966/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.001108s, 902.527/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000865s, 1156.069/s).
+[Sat Apr 12 14:13:43 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:13:43 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:13:43 2014] [debug] 302 Found (0.000939s, 1064.963/s).
+[Sat Apr 12 14:16:14 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:16:14 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:16:15 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:16:15 2014] [error] syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 15, near ");"
+syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 17, near ") ) "
+Global symbol "$self" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 21.
+syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 22, near "}"
+Global symbol "$self" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 27.
+syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 43, near "}"
+syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 58, near "}"
+Global symbol "$token" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 64.
+syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 68, near "}"
+Compilation failed in require at (eval 256) line 1.
+
+[Sat Apr 12 14:16:15 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 14:16:15 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 14:16:15 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:16:15 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:16:15 2014] [debug] 500 Internal Server Error (0.030412s, 32.882/s).
+[Sat Apr 12 14:16:25 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:16:25 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:16:26 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:16:26 2014] [error] syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 15, near ");"
+Compilation failed in require at (eval 256) line 1.
+
+[Sat Apr 12 14:16:26 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 14:16:26 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 14:16:26 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:16:26 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:16:26 2014] [debug] 500 Internal Server Error (0.034056s, 29.363/s).
+[Sat Apr 12 14:16:38 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:16:38 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:16:40 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:16:40 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:16:40 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:16:40 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:16:40 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:16:40 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:16:40 2014] [debug] 404 Not Found (0.036381s, 27.487/s).
+[Sat Apr 12 14:18:01 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:18:01 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:18:03 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:18:03 2014] [error] syntax error at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 13, near ")
+    my "
+Global symbol "$sth" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 13.
+Global symbol "$id" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 15.
+Global symbol "$sth" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 16.
+Global symbol "$token" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 16.
+Global symbol "$sth" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 18.
+Compilation failed in require at (eval 256) line 1.
+
+[Sat Apr 12 14:18:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 14:18:03 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 14:18:03 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:18:03 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:18:03 2014] [debug] 500 Internal Server Error (0.032435s, 30.831/s).
+[Sat Apr 12 14:18:22 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:18:22 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:18:23 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:18:23 2014] [error] Global symbol "$token" requires explicit package name at /home/quim/workspace/tiny_mojo/script/../lib/App/TinyMojo/Main.pm line 16.
+Compilation failed in require at (eval 256) line 1.
+
+[Sat Apr 12 14:18:23 2014] [debug] Template "exception.development.html.ep" not found.
+[Sat Apr 12 14:18:23 2014] [debug] Template "exception.html.ep" not found.
+[Sat Apr 12 14:18:23 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:18:23 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:18:23 2014] [debug] 500 Internal Server Error (0.027851s, 35.905/s).
+[Sat Apr 12 14:18:38 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:18:38 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:18:39 2014] [debug] GET "/bdghf".
+[Sat Apr 12 14:18:39 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:18:39 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:18:39 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:18:39 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:18:40 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:18:40 2014] [debug] 404 Not Found (0.046012s, 21.733/s).
+[Sat Apr 12 14:18:46 2014] [debug] GET "/b".
+[Sat Apr 12 14:18:46 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:18:46 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:18:46 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:18:46 2014] [debug] Rendering cached inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:18:46 2014] [debug] Rendering cached inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:18:46 2014] [debug] 404 Not Found (0.010153s, 98.493/s).
+[Sat Apr 12 14:18:55 2014] [debug] GET "/".
+[Sat Apr 12 14:18:55 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "index".
+[Sat Apr 12 14:18:55 2014] [debug] Action not found in controller.
+[Sat Apr 12 14:18:55 2014] [debug] Rendering template "main/index.html.ep".
+[Sat Apr 12 14:18:55 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:18:55 2014] [debug] 200 OK (0.003870s, 258.398/s).
+[Sat Apr 12 14:19:04 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:19:04 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:19:05 2014] [debug] Rendering template "main/shorten.html.ep".
+[Sat Apr 12 14:19:05 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:19:05 2014] [debug] 200 OK (0.209648s, 4.770/s).
+[Sat Apr 12 14:19:13 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:19:13 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:19:13 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:19:13 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:19:13 2014] [debug] 200 OK (0.208539s, 4.795/s).
+[Sat Apr 12 14:19:41 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:19:41 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:19:44 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:19:44 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:19:44 2014] [debug] Rendering template "main/shorten.html.ep".
+[Sat Apr 12 14:19:44 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:19:44 2014] [debug] 200 OK (0.234350s, 4.267/s).
+[Sat Apr 12 14:20:03 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:20:03 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:20:05 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:20:05 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:20:05 2014] [debug] Rendering template "main/shorten.html.ep".
+[Sat Apr 12 14:20:05 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:20:05 2014] [debug] 200 OK (0.225450s, 4.436/s).
+[Sat Apr 12 14:20:09 2014] [debug] GET "/bRA*91".
+[Sat Apr 12 14:20:09 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:20:09 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:20:09 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:20:09 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:20:09 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:20:09 2014] [debug] 404 Not Found (0.024948s, 40.083/s).
+[Sat Apr 12 14:20:48 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:20:48 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:20:49 2014] [debug] GET "/bRA*91".
+[Sat Apr 12 14:20:49 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:20:49 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:20:49 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:20:49 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:20:49 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:20:49 2014] [debug] 404 Not Found (0.039067s, 25.597/s).
+[Sat Apr 12 14:21:35 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:21:35 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:21:36 2014] [debug] GET "/bRA*91".
+[Sat Apr 12 14:21:36 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:21:36 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:21:36 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:21:36 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:21:36 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:21:36 2014] [debug] 404 Not Found (0.037987s, 26.325/s).
+[Sat Apr 12 14:22:33 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:22:33 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:22:35 2014] [debug] GET "/bRA*91".
+[Sat Apr 12 14:22:35 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:22:35 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:22:35 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:22:35 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:22:35 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:22:35 2014] [debug] 404 Not Found (0.043600s, 22.936/s).
+[Sat Apr 12 14:23:03 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:23:03 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:23:11 2014] [debug] GET "/bRA*91".
+[Sat Apr 12 14:23:11 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:23:11 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:23:11 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:23:11 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:23:11 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:23:11 2014] [debug] 404 Not Found (0.051862s, 19.282/s).
+[Sat Apr 12 14:23:32 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:23:32 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:23:33 2014] [debug] GET "/bRA*91".
+[Sat Apr 12 14:23:33 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:23:33 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:23:33 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:23:33 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:23:33 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:23:33 2014] [debug] 404 Not Found (0.044687s, 22.378/s).
+[Sat Apr 12 14:24:15 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:24:15 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:24:17 2014] [debug] GET "/bRA*91".
+[Sat Apr 12 14:24:17 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:24:17 2014] [debug] 302 Found (0.013722s, 72.876/s).
+[Sat Apr 12 14:24:37 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:24:37 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:24:37 2014] [debug] Rendering template "main/shorten.html.ep".
+[Sat Apr 12 14:24:37 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:24:37 2014] [debug] 200 OK (0.209884s, 4.765/s).
+[Sat Apr 12 14:24:40 2014] [debug] GET "/bfRIf".
+[Sat Apr 12 14:24:40 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:24:40 2014] [debug] 302 Found (0.001026s, 974.659/s).
+[Sat Apr 12 14:25:00 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:25:00 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:25:00 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:25:00 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:25:00 2014] [debug] 200 OK (0.212305s, 4.710/s).
+[Sat Apr 12 14:25:59 2014] [debug] Reading configuration file "/home/quim/workspace/tiny_mojo/app-tiny_mojo.conf".
+[Sat Apr 12 14:25:59 2014] [info] Listening at "http://*:3000".
+[Sat Apr 12 14:26:02 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:26:02 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:26:02 2014] [debug] Rendering template "main/shorten.html.ep".
+[Sat Apr 12 14:26:02 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:26:02 2014] [debug] 200 OK (0.228864s, 4.369/s).
+[Sat Apr 12 14:26:06 2014] [debug] GET "/bDSflZ".
+[Sat Apr 12 14:26:06 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "redirect".
+[Sat Apr 12 14:26:06 2014] [debug] 302 Found (0.001106s, 904.159/s).
+[Sat Apr 12 14:27:35 2014] [debug] GET "/".
+[Sat Apr 12 14:27:35 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "index".
+[Sat Apr 12 14:27:35 2014] [debug] Action not found in controller.
+[Sat Apr 12 14:27:35 2014] [debug] Rendering template "main/index.html.ep".
+[Sat Apr 12 14:27:35 2014] [debug] Rendering template "layouts/default.html.ep".
+[Sat Apr 12 14:27:35 2014] [debug] 200 OK (0.002161s, 462.749/s).
+[Sat Apr 12 14:28:49 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:28:49 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:28:49 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:28:49 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:28:49 2014] [debug] 200 OK (0.206011s, 4.854/s).
+[Sat Apr 12 14:29:22 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:29:22 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:29:22 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:29:22 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:29:22 2014] [debug] 200 OK (0.004093s, 244.320/s).
+[Sat Apr 12 14:31:31 2014] [debug] GET "/do/shorten".
+[Sat Apr 12 14:31:31 2014] [debug] Template "not_found.development.html.ep" not found.
+[Sat Apr 12 14:31:31 2014] [debug] Template "not_found.html.ep" not found.
+[Sat Apr 12 14:31:31 2014] [debug] Rendering inline template "b260ba41ebf72d49075cbbc0f6086768".
+[Sat Apr 12 14:31:31 2014] [debug] Rendering inline template "f460d533626235abe1fccfae3f785367".
+[Sat Apr 12 14:31:31 2014] [debug] 404 Not Found (0.024957s, 40.069/s).
+[Sat Apr 12 14:31:49 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:31:49 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:31:50 2014] [debug] Rendering cached template "main/shorten.html.ep".
+[Sat Apr 12 14:31:50 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Sat Apr 12 14:31:50 2014] [debug] 200 OK (0.208352s, 4.800/s).
+[Sat Apr 12 14:32:13 2014] [debug] POST "/do/shorten".
+[Sat Apr 12 14:32:13 2014] [debug] Routing to controller "App::TinyMojo::Main" and action "shorten".
+[Sat Apr 12 14:32:13 2014] [debug] 200 OK (0.207247s, 4.825/s).

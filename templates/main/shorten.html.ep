@@ -1,0 +1,7 @@
+% layout 'default';
+% title 'TinyMojo - URL shortener';
+<h2>URL shortened!</h2>
+<p>
+  Your new short url is:<br>
+  <%= link_to "".$shorturl => $shorturl %>
+</p>
