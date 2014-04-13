@@ -14,6 +14,10 @@ sub startup {
   # Database
   $self->plugin( database => { databases => { db => $self->config->{database} } } );
 
+  # Translations
+  $self->plugin('wolowitz');
+  $self->defaults( language => $self->config->{language} );
+
   # Session secret token
   $self->secrets( $self->config->{secrets} );
 

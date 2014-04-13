@@ -1,0 +1,27 @@
+{
+
+  // Nav bar
+  "Home": {
+    "ca": "Home"
+  },
+  "Admin": {
+    "ca": "Admin"
+  },
+
+  // Shorten
+  "Link to shorten": {
+    "ca": "Adreça a escurçar"
+  },
+  "Link to shorten": {
+    "ca": "Adreça a escurçar"
+  },
+  "Shorten": {
+    "ca": "Escurça"
+  },
+  "Enter URL to shorten...": {
+    "ca": "Escriu la adreça URL a escurçar..."
+  },
+  "Your new short url is:": {
+    "ca": "La teva adreça curta és:"
+  }
+}

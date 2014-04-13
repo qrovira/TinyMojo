@@ -1,7 +1,11 @@
 % layout 'default';
-% title 'TinyMojo - URL shortener';
-<h2>URL shortener</h2>
-<form method="POST" action="/do/shorten">
-    <input type="url" name="longurl" placeholder="Enter URL to shorten..."/>
-    <input type="submit" value="Shorten"/>
-</form>
+% title $config->{site_mission};
+<div class="jumbotron">
+  <form method="POST" action="/do/shorten" role="form">
+    <div class="form-group">
+      <label for="longurl"><%= loc('Link to shorten') %></label>
+      <input type="url" name="longurl" class="form-control" placeholder="<%= loc('Enter URL to shorten...') %>"/>
+    </div>
+    <button type="submit" class="button .btn-lg"><%= loc('Shorten') %></button>
+  </form>
+</div>
