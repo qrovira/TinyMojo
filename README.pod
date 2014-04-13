@@ -12,7 +12,53 @@ The approach taken for the shortening relies entirely on the auto_increment
 primary key on the database backend, which avoids all kinds of messy queries
 during shortening or lookup.
 
-To achieve this, the shortening works like follows:
+It also avoids sequentiality on the generated URLs by using L<Crypt::Skip32>.
+
+=head2 CONFIGURATION
+
+All configuration is done through the default L<Mojolicious::Plugin::Config> plugin,
+which you can see on the F<app-tiny_mojo.conf> file.
+
+There you can set the encryption key (10 bytes), along with the database settings.
+
+=head3 Example configuration
+
+  {
+      # Database configuration
+      database => {
+          dsn      => "dbi:mysql:dbname=tinymojo",
+          username => "tinymojo",
+          password => "tinymojo",
+      },
+
+      # Session encryption secret
+      secrets => [
+          'heregoesyoursecret'
+      ],
+
+      # Block size for Skip32 or Skipjack is 10 bytes
+      crypt_key => '1234567890',
+      
+      # Some site vars
+      language => 'en',
+      site_name => 'TinyMojo',
+      site_mission => 'Short URLs made simple.',
+  };
+
+=head1 DATABASE
+
+The database only requires a trivial I<url> table with id and longurl fields.
+
+=head3 URL table example (MySQL)
+
+  CREATE TABLE url (
+    id int auto_increment primary key,
+    longurl varchar(4096)
+  );
+
+=head1 SHORTENING METHOD
+
+The shortening works like follows:
 
 =over
 
@@ -27,38 +73,6 @@ This assumes 32 bit ints as IDs, but you can switch to 64 bits and L<Crypt::Skip
 =back
 
 The lookup of shortened URLs is prety straight forward given the above method.
-
-=head1 CONFIGURATION
-
-All configuration is done through the default L<Mojolicious::Plugin::Config> plugin,
-which you can see on the F<app-tiny_mojo.conf> file.
-
-There you can set the encryption key (10 bytes), along with the database settings.
-
-=head2 Example configuration
-
-  {
-      database => {
-          dsn      => "dbi:mysql:dbname=tinymojo",
-          username => "tinymojo",
-          password => "tinymojo",
-      },
-      secrets => [
-          'heregoesyoursecret'
-      ],
-      crypt_key => '1234567890',
-  };
-
-=head2 DATABASE
-
-The database only requires a trivial I<url> table with id and longurl fields.
-
-=head2 URL table example (MySQL)
-
-  CREATE TABLE url (
-    id int auto_increment primary key,
-    longurl varchar(4096)
-  );
 
 =head1 CAVEATS
 
