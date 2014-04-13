@@ -27,6 +27,11 @@ sub startup {
   # Helpers to map IDs to tokens and back
   $self->helper( id_to_token => \&_id_to_token );
   $self->helper( token_to_id => \&_token_to_id );
+  $self->helper( short_url => sub {
+      my $c = shift;
+      my $id = shift;
+      return $c->url_for('/'.$c->id_to_token($id))->to_abs;
+  } );
 
   # Normal route to controller
   $r->get('/')->to('main#index');
