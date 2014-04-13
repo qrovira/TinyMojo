@@ -9,6 +9,7 @@
     <title><%= $config->{site_name} %> - <%= $title %></title>
     <style type="text/css">
       .header { padding-bottom: 20px; }
+      .jumbotron h2 { margin-top: 0px; margin-bottom: 30px; }
     </style>
   </head>
   <body>
@@ -20,7 +21,9 @@
         <h3><%= $config->{site_name} %> - <%= $title %></h3>
       </div>
 
-      <%= content %>
+      <div class="jumbotron">
+        <%= content %>
+      </div>
   
       <div class="footer">
         <p>&copy; Quim Rovira 2014</p>

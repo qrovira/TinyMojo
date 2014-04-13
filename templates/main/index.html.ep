@@ -1,11 +1,9 @@
 % layout 'default';
 % title $config->{site_mission};
-<div class="jumbotron">
-  <form method="POST" action="/do/shorten" role="form">
-    <div class="form-group">
-      <label for="longurl"><%= loc('Link to shorten') %></label>
-      <input type="url" name="longurl" class="form-control" placeholder="<%= loc('Enter URL to shorten...') %>"/>
-    </div>
-    <button type="submit" class="button .btn-lg"><%= loc('Shorten') %></button>
-  </form>
-</div>
+<form method="POST" action="/do/shorten" role="form">
+  <div class="form-group">
+    <label for="longurl"><%= loc('Link to shorten') %></label>
+    <input type="url" name="longurl" class="form-control" placeholder="<%= loc('Enter URL to shorten...') %>"/>
+  </div>
+  <button type="submit" class="button .btn-lg"><%= loc('Shorten') %></button>
+</form>
