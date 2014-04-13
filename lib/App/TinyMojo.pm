@@ -39,6 +39,9 @@ sub startup {
   # Actions
   $r->post('/do/shorten')->to('main#shorten');
 
+  # Admin
+  $r->get('/admin/')->to('admin#dashboard');
+
   # Handle short url
   $r->get('/:shorturl')->to('main#redirect');
 }

@@ -1,0 +1,20 @@
+% layout 'default';
+% title $config->{site_mission};
+<h2><%= loc('List of last 100 short URLs generated') %></h2>
+<table class="table table-condensed table-striped">
+  <thead>
+    <tr>
+      <th><%= loc('ID') %></th>
+      <th><%= loc('Short URL') %></th>
+      <th><%= loc('Long URL') %></th>
+    </tr>
+  </thead>
+% foreach my $link ( @{ $rows // [] } ) {
+% my $short = short_url( $link->{id} );
+  <tr>
+    <td><%= $link->{id} %></td>
+    <td><%= link_to $short => $short %></td>
+    <td><%= $link->{longurl} %></td>
+  </tr>
+% }
+</table>

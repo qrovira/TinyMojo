@@ -17,6 +17,7 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li<%== $action eq 'index' ? ' class="active"' : '' %>><a href="/"><%= loc('Home') %></a></li>
+          <li<%== $controller eq 'admin' ? ' class="active"' : '' %>><a href="/admin/"><%= loc('Admin') %></a></li>
         </ul>
         <h3><%= $config->{site_name} %> - <%= $title %></h3>
       </div>
