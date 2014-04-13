@@ -12,7 +12,6 @@ sub redirect {
     my $id = $self->_token_to_id( $shorturl );
     my $sth = $self->db->prepare('SELECT * FROM url WHERE id = ?');
 
-    say("shorturl request for $shorturl ($id).");
     $sth->execute( $id );
 
     if( my $entry = $sth->fetchrow_hashref ) {
@@ -30,7 +29,6 @@ sub shorten {
     if( $sth->execute($longurl) ) {
         my $token = $self->_id_to_token( $sth->{mysql_insertid} );
         my $shorturl = $self->url_for( '/'.$token )->to_abs;
-        say("shorten request for $longurl (id $sth->{mysql_insertid}), token $token.");
 
         $self->respond_to( 
             json => { json => { shorturl => $shorturl } },
