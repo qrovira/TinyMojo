@@ -6,44 +6,44 @@ use Crypt::Skip32;
 
 # This method will run once at server start
 sub startup {
-  my $self = shift;
+    my $self = shift;
 
-  # Router
-  my $r = $self->routes;
+    # Configuration
+    $self->plugin('config');
 
-  # Configuration
-  $self->plugin('config');
+    # Database
+    $self->plugin( database => { databases => { db => $self->config->{database} } } );
 
-  # Database
-  $self->plugin( database => { databases => { db => $self->config->{database} } } );
+    # Translations
+    $self->plugin('wolowitz');
+    $self->defaults( language => $self->config->{language} );
 
-  # Translations
-  $self->plugin('wolowitz');
-  $self->defaults( language => $self->config->{language} );
+    # Session secret token
+    $self->secrets( $self->config->{secrets} );
 
-  # Session secret token
-  $self->secrets( $self->config->{secrets} );
+    # Helpers to map IDs to tokens and back
+    $self->helper( id_to_token => \&_id_to_token );
+    $self->helper( token_to_id => \&_token_to_id );
+    $self->helper( short_url => sub {
+        my $c = shift;
+        my $id = shift;
+        return $c->url_for('/'.$c->id_to_token($id))->to_abs;
+    } );
 
-  # Helpers to map IDs to tokens and back
-  $self->helper( id_to_token => \&_id_to_token );
-  $self->helper( token_to_id => \&_token_to_id );
-  $self->helper( short_url => sub {
-      my $c = shift;
-      my $id = shift;
-      return $c->url_for('/'.$c->id_to_token($id))->to_abs;
-  } );
+    # Router
+    my $r = $self->routes;
 
-  # Normal route to controller
-  $r->get('/')->to('main#index');
+    # Normal route to controller
+    $r->get('/')->to('main#index');
 
-  # Actions
-  $r->post('/do/shorten')->to('main#shorten');
+    # Actions
+    $r->post('/do/shorten')->to('main#shorten');
 
-  # Admin
-  $r->get('/admin/')->to('admin#dashboard');
+    # Admin
+    $admin_r->get('/admin/')->to('admin#dashboard');
 
-  # Handle short url
-  $r->get('/:shorturl')->to('main#redirect');
+    # Handle short url
+    $r->get('/:shorturl')->to('main#redirect');
 }
 
 
