@@ -18,6 +18,12 @@ sub startup {
     $self->plugin('wolowitz');
     $self->defaults( language => $self->config->{language} );
 
+    # Bootstrap helpers
+    $self->plugin('BootstrapHelpers', layout => 1);
+
+    # Debugging stuff
+    $self->plugin('DevPanels') if $self->config->{debugging};
+
     # Session secret token
     $self->secrets( $self->config->{secrets} );
 
@@ -30,20 +36,32 @@ sub startup {
         return $c->url_for('/'.$c->id_to_token($id))->to_abs;
     } );
 
+    # Helpers for logged in and admin user checks
+    $self->helper( logged_in => sub { defined shift->session('user') } );
+    $self->helper( admin => sub { my $u = shift->session('user'); defined $u && $u->{admin} } );
+
     # Router
     my $r = $self->routes;
+    $r->add_shortcut( to_named => sub { return shift->to(@_)->name($_[0]); });
+    my $auth_r = $r->bridge->to( 'admin#check_auth' );
+    my $admin_r = $r->bridge->to( 'admin#check_admin' );
 
     # Normal route to controller
-    $r->get('/')->to('main#index');
+    $r->get('/')->to_named('main#index');
 
     # Actions
-    $r->post('/do/shorten')->to('main#shorten');
+    $admin_r->post('/do/shorten')->to_named('main#shorten');
+
 
     # Admin
-    $admin_r->get('/admin/')->to('admin#dashboard');
+    $r->route('/user/login')->to_named('admin#login');
+    $auth_r->get('/user/logout')->to_named('admin#logout');
+    $auth_r->get('/user/dashboard')->to_named('admin#dashboard');
+    $auth_r->route('/user/profile')->to_named('admin#profile');
+    $admin_r->get('/user/admin/list_urls')->to_named('admin#list_urls');
 
     # Handle short url
-    $r->get('/:shorturl')->to('main#redirect');
+    $r->get('/:shorturl')->to_named('main#redirect');
 }
 
 

@@ -1,0 +1,19 @@
+% layout 'default';
+% title $config->{site_mission};
+<h2><%= loc('Login') %></h2>
+% if( my $message = stash 'error' ) {
+  <div class="alert alert-danger">
+    %= $message
+  </div>
+% }
+%= form_for login => ( method => 'POST', role => "form" ) => begin
+  <div class="form-group">
+    %= label_for login => loc('User name')
+    %= text_field 'login', class => "form-control", placeholder => loc('Type username...')
+  </div>
+  <div class="form-group">
+    %= label_for password => loc('Password')
+    %= password_field 'password', class => "form-control"
+  </div>
+  %= submit_button loc('Login'), class => "button .btn-lg"
+% end

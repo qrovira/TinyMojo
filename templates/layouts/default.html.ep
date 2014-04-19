@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <%= bs_include all => 1 %>
     <title><%= $config->{site_name} %> - <%= $title %></title>
     <style type="text/css">
       .header { padding-bottom: 20px; }
@@ -15,24 +15,19 @@
   <body>
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li<%== $action eq 'index' ? ' class="active"' : '' %>><a href="/"><%= loc('Home') %></a></li>
-          <li<%== $controller eq 'admin' ? ' class="active"' : '' %>><a href="/admin/"><%= loc('Admin') %></a></li>
-        </ul>
-        <h3><%= $config->{site_name} %> - <%= $title %></h3>
+        <%= bs_nav "nav nav-pills navbar-right" => begin %>
+          <%= bs_nav_item loc('Home') => 'main#index' %>
+          <%= bs_nav_item loc('User') => 'admin#dashboard' %>
+        <% end %>
+        <h1><%= $config->{site_name} %> - <%= $title %></h1>
       </div>
-
+      <%= bs_all_flashes %>
       <div class="jumbotron">
         <%= content %>
       </div>
-  
       <div class="footer">
         <p>&copy; Quim Rovira 2014</p>
       </div>
-
     </div>
-
-    <script src="/jquery-2.1.0.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

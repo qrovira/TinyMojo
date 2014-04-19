@@ -1,0 +1,17 @@
+% extends 'admin/base', title => loc('Profile');
+% content main => begin
+  <h3><%= loc('Profile') %></h3>
+  %= form_for profile => ( method => 'POST', role => "form" ) => begin
+    %= hidden_field id => $user->{id}
+    %= bs_form_group login => ( label => loc('User name') ) => begin
+      %= text_field 'login', class => "form-control", placeholder => loc('Type username...')
+    % end
+    %= bs_form_group password => ( label => loc('Password') ) => begin
+      %= password_field 'password', class => "form-control"
+    % end
+    %= bs_form_group password_again => ( label => loc('Password (again)') ) => begin
+      %= password_field 'password_again', class => "form-control"
+    % end
+    %= submit_button loc('Save'), class => "button .btn-lg"
+  % end
+% end
