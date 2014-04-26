@@ -34,14 +34,15 @@ sub startup {
     $self->plugin('DevPanels') if $self->config->{debugging};
 
     # Session secret token
-    $self->secrets( $self->config->{secrets} );
+    $self->secrets( delete $self->config->{secrets} );
 
     # Controller namespace
     $self->routes->namespaces(['App::TinyMojo::Controller']);
 
     # Helpers to map IDs to tokens and back
-    $self->helper( id_to_token => \&_id_to_token );
-    $self->helper( token_to_id => \&_token_to_id );
+    my $cryptokey = delete $self->config->{crypt_key};
+    $self->helper( id_to_token => sub { _id_to_token(@_, $cryptokey); } );
+    $self->helper( token_to_id => sub { _token_to_id(@_, $cryptokey); } );
     $self->helper( short_url => sub {
         my $c = shift;
         my $id = shift;
@@ -97,23 +98,23 @@ sub startup {
 #
 
 sub _id_to_token {
-    my ($self, $id) = @_;
+    my ($self, $id, $key) = @_;
 
     # So tiny urls can't be sequentially checked
-    $id = _encrypt( $id, $self->config->{crypt_key} );
+    $id = _encrypt( $id, $key );
 
     # Now transform int to new url-friendly base
     return _int_to_base_X( $id );
 }
 
 sub _token_to_id {
-    my ($self, $token) = @_;
+    my ($self, $token, $key) = @_;
 
     # So tiny urls can't be sequentially checked
     my $int = _base_X_to_int($token);
 
     # Now transform int to new url-friendly base
-    return _decrypt( $int, $self->config->{crypt_key} );
+    return _decrypt( $int, $key );
 }
 
 #
