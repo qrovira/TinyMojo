@@ -46,8 +46,9 @@ sub dashboard {
 
     $self->stash(
       rows => $self->db->selectall_arrayref(
-        'SELECT id, longurl FROM url ORDER BY id DESC LIMIT 100',
-        { Slice => { id => 1, longurl => 2 } }
+        'SELECT id, longurl FROM url WHERE user_id = ? ORDER BY id DESC LIMIT 100',
+        { Slice => { id => 1, longurl => 2 } },
+        $self->session('user')->{id}
       )
     );
 }

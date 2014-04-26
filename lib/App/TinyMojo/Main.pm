@@ -19,9 +19,10 @@ sub redirect {
 sub shorten {
     my $self = shift;
     my $longurl = $self->param('longurl');
-    my $sth = $self->db->prepare('INSERT INTO url (longurl) VALUES (?)');
+    my $sth = $self->db->prepare('INSERT INTO url (longurl, user_id) VALUES (?,?)');
+    my $user_id = $self->logged_in ? $self->session('user')->{id} : \"DEFAULT";
 
-    if( $sth->execute($longurl) ) {
+    if( $sth->execute($longurl, $user_id ) ) {
         my $token = $self->id_to_token( $sth->{mysql_insertid} );
         my $shorturl = $self->url_for( '/'.$token )->to_abs;
 
