@@ -4,6 +4,9 @@ use Mojo::Base 'Mojolicious';
 # Could use Cryp::Skipjack for 64 bit block sizes
 use Crypt::Skip32;
 
+use DBIx::Connector;
+use App::TinyMojo::DB;
+
 # This method will run once at server start
 sub startup {
     my $self = shift;
@@ -12,7 +15,13 @@ sub startup {
     $self->plugin('config');
 
     # Database
-    $self->plugin( database => { databases => { db => $self->config->{database} } } );
+    my $dbconf = delete( $self->config->{database} );
+    my $connector = DBIx::Connector->new( map { $dbconf->{$_} } qw/ dsn username password / );
+    $self->helper( db => sub {
+        my ($self, $resultset) = @_;
+        my $dbh = App::TinyMojo::DB->connect( sub { return $connector->dbh } );
+        return $resultset ? $dbh->resultset($resultset) : $dbh;
+    } );
 
     # Translations
     $self->plugin('wolowitz');
@@ -26,6 +35,9 @@ sub startup {
 
     # Session secret token
     $self->secrets( $self->config->{secrets} );
+
+    # Controller namespace
+    $self->routes->namespaces(['App::TinyMojo::Controller']);
 
     # Helpers to map IDs to tokens and back
     $self->helper( id_to_token => \&_id_to_token );
@@ -52,6 +64,7 @@ sub startup {
     # Router
     my $r = $self->routes;
     $r->add_shortcut( to_named => sub { return shift->to(@_)->name($_[0]); });
+
     my $auth_r = $r->bridge->to( 'admin#check_auth' );
     my $admin_r = $r->bridge->to( 'admin#check_admin' );
 

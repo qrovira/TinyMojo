@@ -1,18 +1,14 @@
-package App::TinyMojo::Main;
+package App::TinyMojo::Controller::Main;
 use Mojo::Base 'Mojolicious::Controller';
 
 sub redirect {
     my $self = shift;
     my $shorturl = $self->param('shorturl');
     my $id = $self->token_to_id( $shorturl );
-    my $sth = $self->db->prepare('SELECT * FROM url WHERE id = ?');
-
-    $sth->execute( $id );
-
-    my $entry = $sth->fetchrow_hashref;
+    my $url = $self->db('Url')->find($id);
 
     return $self->render_not_found
-        unless $entry;
+        unless $url;
 
     if( $self->app->config->{track_visits} ) {
         # Set evil tracking cookie
@@ -23,37 +19,32 @@ sub redirect {
         }
 
         # Log redirect
-        my $logsth = $self->db->prepare(<<"EOQ");
-INSERT INTO redirect (url_id, visitor_ip, visitor_forwarded_for, visitor_uuid, visitor_ua) VALUES (?,?,?,?,?)
-EOQ
-
-        $logsth->execute(
-            $id,
-            $self->tx->remote_address,
-            scalar $self->req->headers->header('X-Forwarded-For'),
-            $cookie,
-            $self->req->headers->user_agent
-        );
+        $self->db('Redirect')->create({
+            url_id => $id,
+            visitor_ip => $self->tx->remote_address,
+            visitor_forwarded_for => scalar $self->req->headers->header('X-Forwarded-For'),
+            visitor_uuid => $cookie,
+            visitor_ua => $self->req->headers->user_agent,
+        });
 
     }
 
     # Redirect
-    $self->redirect_to( $entry->{longurl} );
+    $self->redirect_to( $url->longurl );
 }
 
 sub shorten {
     my $self = shift;
     my $longurl = $self->param('longurl');
-    my $sth = $self->db->prepare('INSERT INTO url (longurl, user_id) VALUES (?,?)');
     my $user_id = $self->logged_in ? $self->session('user')->{id} : \"DEFAULT";
 
-    if( $sth->execute($longurl, $user_id ) ) {
-        my $token = $self->id_to_token( $sth->{mysql_insertid} );
+    if( my $url = $self->db('Url')->create({ longurl => $longurl, user_id => $user_id }) ) {
+        my $token = $self->id_to_token( $url->id );
         my $shorturl = $self->url_for( '/'.$token )->to_abs;
 
         $self->respond_to( 
             json => { json => { shorturl => $shorturl } },
-            html => { shorturl => $shorturl },
+            html => { url => $url, shorturl => $shorturl },
         );
     } else {
         $self->render_exception;

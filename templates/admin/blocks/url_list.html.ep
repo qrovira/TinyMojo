@@ -7,13 +7,13 @@
         <th><%= loc('Hits') %></th>
       </tr>
     </thead>
-  % foreach my $link ( @{ $rows // [] } ) {
-  % my $short = short_url( $link->{id} );
+  % foreach my $url ( @{ $urls // [] } ) {
+  %   my $short = short_url $url->id;
     <tr>
-      <td><%= $link->{id} %></td>
+      <td><%= $url->id %></td>
       <td><%= link_to $short => $short %></td>
-      <td><%= $link->{longurl} %></td>
-      <td><%= $link->{hits} %></td>
+      <td><%= $url->longurl %></td>
+      <td><%= $hits->{$url->id} // 0 %></td>
     </tr>
   % }
   </table>
