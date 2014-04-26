@@ -50,7 +50,7 @@ sub startup {
     $r->get('/')->to_named('main#index');
 
     # Actions
-    $admin_r->post('/do/shorten')->to_named('main#shorten');
+    $r->post('/do/shorten')->to_named('main#shorten');
 
 
     # Admin
