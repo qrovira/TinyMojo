@@ -9,7 +9,7 @@
     %= bs_form_group password => ( label => loc('Password') ) => begin
       %= password_field 'password', class => "form-control"
     % end
-    %= bs_form_group password_again => ( label => loc('Password (again)') ) => begin
+    %= bs_form_group password_again => ( label => loc('%1 (again)', loc('Password')) ) => begin
       %= password_field 'password_again', class => "form-control"
     % end
     %= submit_button loc('Save'), class => "button .btn-lg"

@@ -1,27 +1,86 @@
 {
+    // Nav bar
+    "Home": {
+        "ca": "Home"
+    },
+    "User": {
+        "ca": "Usuari"
+    },
 
-  // Nav bar
-  "Home": {
-    "ca": "Home"
-  },
-  "Admin": {
-    "ca": "Admin"
-  },
+    // Shorten
+    "Link to shorten": {
+        "ca": "Adreça a escurçar"
+    },
+    "Link to shorten": {
+        "ca": "Adreça a escurçar"
+    },
+    "Shorten": {
+        "ca": "Escurça"
+    },
+    "Enter URL to shorten...": {
+        "ca": "Escriu la adreça URL a escurçar..."
+    },
+    "Your new short url is:": {
+        "ca": "La teva adreça curta és:"
+    },
 
-  // Shorten
-  "Link to shorten": {
-    "ca": "Adreça a escurçar"
-  },
-  "Link to shorten": {
-    "ca": "Adreça a escurçar"
-  },
-  "Shorten": {
-    "ca": "Escurça"
-  },
-  "Enter URL to shorten...": {
-    "ca": "Escriu la adreça URL a escurçar..."
-  },
-  "Your new short url is:": {
-    "ca": "La teva adreça curta és:"
-  }
+    // User login
+    "User name": {
+        "ca": "Nom d'usuari"
+    },
+    "Password": {
+        "ca": "Contrasenya"
+    },
+    "Log in": {
+        "ca": "Accedir"
+    },
+    "Log out": {
+        "ca": "Sortir"
+    },
+    "Not authorized": {
+        "ca": "No autoritzat"
+    },
+    "Invalid login": {
+        "ca": "Dades d'accés invàlides"
+    },
+    "Logged in!": {
+        "ca": "Sessió iniciada!"
+    },
+    "Logged out!": {
+        "ca": "Sessió tancada!"
+    },
+
+    // Dashboard
+    "Dashboard": {
+        "ca": "Panell"
+    },
+    "Your last generated URLs": {
+        "ca": "Darreres URLs generades"
+    },
+    "Short URL": {
+        "ca": "URL breu"
+    },
+    "Long URL": {
+        "ca": "URL llarga"
+    },
+
+    // Profile
+    "Profile": {
+        "ca": "Perfil"
+    },
+    "%1 (again)": {
+        "ca": "%1 (altre cop)"
+    },
+    "Save": {
+        "ca": "Desar"
+    },
+
+    // All URLs
+    "List all URLs": {
+        "ca": "Totes les URLs"
+    },
+    "List of last %1 short URLs generated": {
+        "ca": "Llistat de les darreres %1 URLs generades"
+    }
+
 }

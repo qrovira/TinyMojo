@@ -1,6 +1,6 @@
 % extends 'admin/base', title => loc('Last URLs');
 % content main => begin
-  <h3><%= loc('List of last 100 short URLs generated') %></h3>
+  <h3><%= loc('List of last %1 short URLs generated',100) %></h3>
   <table class="table table-condensed table-striped">
     <thead>
       <tr>

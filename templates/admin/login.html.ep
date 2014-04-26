@@ -1,6 +1,6 @@
 % layout 'default';
 % title $config->{site_mission};
-<h2><%= loc('Login') %></h2>
+<h2><%= loc('Log in') %></h2>
 % if( my $message = stash 'error' ) {
   <div class="alert alert-danger">
     %= $message
@@ -15,5 +15,5 @@
     %= label_for password => loc('Password')
     %= password_field 'password', class => "form-control"
   </div>
-  %= submit_button loc('Login'), class => "button .btn-lg"
+  %= submit_button loc('Log in'), class => "button .btn-lg"
 % end
