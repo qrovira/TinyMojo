@@ -1,0 +1,20 @@
+  <table class="table table-condensed table-striped">
+    <thead>
+      <tr>
+        <th><%= loc('ID') %></th>
+        <th><%= loc('Short URL') %></th>
+        <th><%= loc('Long URL') %></th>
+        <th><%= loc('Hits') %></th>
+      </tr>
+    </thead>
+  % foreach my $link ( @{ $rows // [] } ) {
+  % my $short = short_url( $link->{id} );
+    <tr>
+      <td><%= $link->{id} %></td>
+      <td><%= link_to $short => $short %></td>
+      <td><%= $link->{longurl} %></td>
+      <td><%= $link->{hits} %></td>
+    </tr>
+  % }
+  </table>
+

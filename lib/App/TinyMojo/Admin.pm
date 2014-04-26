@@ -43,26 +43,62 @@ sub check_admin {
 
 sub dashboard {
     my ($self) = @_;
+    my $offset = $self->param('offset') // 0;
 
-    $self->stash(
-      rows => $self->db->selectall_arrayref(
-        'SELECT id, longurl FROM url WHERE user_id = ? ORDER BY id DESC LIMIT 100',
+    my $urls = $self->db->selectall_arrayref(
+        'SELECT id, longurl FROM url WHERE user_id = ? ORDER BY id DESC LIMIT ?,100',
         { Slice => { id => 1, longurl => 2 } },
-        $self->session('user')->{id}
-      )
+        $self->session('user')->{id}, $offset
     );
+
+    my $visits = {};
+
+    if( @$urls ) {
+        $visits = $self->db->selectall_hashref(
+            "SELECT url_id, count(*) as hits FROM redirect ".
+            "WHERE url_id IN (@{[ join ',', map '?', @$urls ]}) GROUP BY url_id",
+            'url_id', {},
+            map { $_->{id} } @$urls
+        );
+    }
+
+    $self->stash( rows => [
+        map { {
+            %$_,
+            hits => $visits->{$_->{id}}{hits} // 0,
+        } } @$urls
+    ] );
 }
 
 
 sub list_urls {
     my ($self) = @_;
+    my $offset = $self->param('offset') // 0;
 
-    $self->stash(
-      rows => $self->db->selectall_arrayref(
-        'SELECT id, longurl FROM url ORDER BY id DESC LIMIT 100',
-        { Slice => { id => 1, longurl => 2 } }
-      )
+    my $urls = $self->db->selectall_arrayref(
+        'SELECT id, longurl FROM url ORDER BY id DESC LIMIT ?,100',
+        { Slice => { id => 1, longurl => 2 } },
+        $offset
     );
+
+
+    my $visits = {};
+
+    if( @$urls ) {
+        $visits = $self->db->selectall_hashref(
+            "SELECT url_id, count(*) as hits FROM redirect ".
+            "WHERE url_id IN (@{[ join ',', map '?', @$urls ]}) GROUP BY url_id",
+            'url_id', {},
+            map { $_->{id} } @$urls
+        );
+    }
+
+    $self->stash( rows => [
+        map { {
+            %$_,
+            hits => $visits->{$_->{id}}{hits} // 0,
+        } } @$urls
+    ] );
 }
 
 sub login {

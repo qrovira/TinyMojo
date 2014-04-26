@@ -1,21 +1,5 @@
 % extends 'admin/base', title => loc('Last URLs');
 % content main => begin
   <h3><%= loc('List of last %1 short URLs generated',100) %></h3>
-  <table class="table table-condensed table-striped">
-    <thead>
-      <tr>
-        <th><%= loc('ID') %></th>
-        <th><%= loc('Short URL') %></th>
-        <th><%= loc('Long URL') %></th>
-      </tr>
-    </thead>
-  % foreach my $link ( @{ $rows // [] } ) {
-  % my $short = short_url( $link->{id} );
-    <tr>
-      <td><%= $link->{id} %></td>
-      <td><%= link_to $short => $short %></td>
-      <td><%= $link->{longurl} %></td>
-    </tr>
-  % }
-  </table>
+  %= include 'admin/blocks/url_list', rows => $rows
 % end
