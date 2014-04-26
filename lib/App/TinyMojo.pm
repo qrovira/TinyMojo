@@ -187,11 +187,29 @@ There you can set the encryption key (10 bytes), along with the database setting
       site_mission => 'Short URLs made simple.',
   };
 
+=head1 SHORTENING METHOD
+
+The shortening works like follows:
+
+=over
+
+=item Insert to database, and retrieve the auto_increment $id
+
+=item Encrypt the id using L<Crypt::Skip32>
+
+This assumes 32 bit ints as IDs, but you can switch to 64 bits and L<Crypt::Skipjack>.
+
+=item Apply a naive base change using a hardcoded dictionary of URL-friendly characters
+
+=back
+
+The lookup of shortened URLs is prety straight forward given the above method.
+
 =head1 DATABASE
 
-The database only requires two tables: for I<url>s and I<user>s.
+The database only requires two tables: I<url> and I<user>
 
-=head3 URL table example (MySQL)
+=head3 URL table
 
   CREATE TABLE url (
     id int auto_increment primary key,
@@ -199,30 +217,14 @@ The database only requires two tables: for I<url>s and I<user>s.
     user_id int not null default 0
   );
 
+=head3 User table
+
   CREATE TABLE `user` (
     id int auto_increment primary key,
     login varchar(255) not null,
     password varchar(512),
     admin bool not null default 0,
   );
-
-=head1 SHORTENING METHOD
-
-The shortening works like follows:
-
-=over
-
-=item 1. Insert to database, and retrieve the auto_increment $id
-
-=item 2. Encrypt the id using L<Crypt::Skip32>
-
-This assumes 32 bit ints as IDs, but you can switch to 64 bits and L<Crypt::Skipjack>.
-
-=item 3. Apply a naive base change using a hardcoded dictionary of URL-friendly characters
-
-=back
-
-The lookup of shortened URLs is prety straight forward given the above method.
 
 =head1 CAVEATS
 
