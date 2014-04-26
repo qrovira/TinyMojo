@@ -41,6 +41,12 @@ There you can set the encryption key (10 bytes), along with the database setting
         language => 'en',
         site_name => 'TinyMojo',
         site_mission => 'Short URLs made simple.',
+
+        # Allow non-logged-in users to shorten URLs
+        allow_anonymous_shorten => 1, 
+
+        # Enable visitor tracking
+        track_visits => 1,
     };
 
 # SHORTENING METHOD
@@ -76,6 +82,18 @@ The database only requires two tables: _url_ and _user_
       password varchar(512),
       admin bool not null default 0,
     );
+
+### Tracking table
+
+    CREATE TABLE `redirect` (
+      id int auto_increment primary key,
+      url_id int not null,
+      time timestamp not null default current_timestamp,
+      visitor_ip varchar(39) not null,
+      visitor_forwarded_for varchar(255) default null,
+      visitor_uuid varchar(100) default null,
+      visitor_ua varchar(1024) default null,
+    )
 
 # CAVEATS
 

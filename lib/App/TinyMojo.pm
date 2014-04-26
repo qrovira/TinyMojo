@@ -40,6 +40,15 @@ sub startup {
     $self->helper( logged_in => sub { defined shift->session('user') } );
     $self->helper( admin => sub { my $u = shift->session('user'); defined $u && $u->{admin} } );
 
+    # If we're tracking, provide the UUID generation helper (to use faster iters)
+    if( $self->config->{track_visits} ) {
+        require Data::UUID::MT;
+
+        my $mt = Data::UUID::MT->new;
+        my $next = $mt->iterator;
+        $self->helper( generate_uuid => sub { return uc join "-", unpack("H8H4H4H4H12", $next->());  } );
+    }
+
     # Router
     my $r = $self->routes;
     $r->add_shortcut( to_named => sub { return shift->to(@_)->name($_[0]); });
@@ -189,6 +198,12 @@ There you can set the encryption key (10 bytes), along with the database setting
       language => 'en',
       site_name => 'TinyMojo',
       site_mission => 'Short URLs made simple.',
+
+      # Allow non-logged-in users to shorten URLs
+      allow_anonymous_shorten => 1, 
+
+      # Enable visitor tracking
+      track_visits => 1,
   };
 
 =head1 SHORTENING METHOD
@@ -229,6 +244,18 @@ The database only requires two tables: I<url> and I<user>
     password varchar(512),
     admin bool not null default 0,
   );
+
+=head3 Tracking table
+
+  CREATE TABLE `redirect` (
+    id int auto_increment primary key,
+    url_id int not null,
+    time timestamp not null default current_timestamp,
+    visitor_ip varchar(39) not null,
+    visitor_forwarded_for varchar(255) default null,
+    visitor_uuid varchar(100) default null,
+    visitor_ua varchar(1024) default null,
+  )
 
 =head1 CAVEATS
 

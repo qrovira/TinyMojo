@@ -9,11 +9,36 @@ sub redirect {
 
     $sth->execute( $id );
 
-    if( my $entry = $sth->fetchrow_hashref ) {
-        $self->redirect_to( $entry->{longurl} );
-    } else {
-        $self->render_not_found;
+    my $entry = $sth->fetchrow_hashref;
+
+    return $self->render_not_found
+        unless $entry;
+
+    if( $self->app->config->{track_visits} ) {
+        # Set evil tracking cookie
+        my $cookie = $self->cookie('tmt');
+        unless($cookie) {
+            $cookie = $self->generate_uuid;
+            $self->cookie( tmt => $cookie, { expires => time + 3600 * 24 * 365 * 10 } );
+        }
+
+        # Log redirect
+        my $logsth = $self->db->prepare(<<"EOQ");
+INSERT INTO redirect (url_id, visitor_ip, visitor_forwarded_for, visitor_uuid, visitor_ua) VALUES (?,?,?,?,?)
+EOQ
+
+        $logsth->execute(
+            $id,
+            $self->tx->remote_address,
+            scalar $self->req->headers->header('X-Forwarded-For'),
+            $cookie,
+            $self->req->headers->user_agent
+        );
+
     }
+
+    # Redirect
+    $self->redirect_to( $entry->{longurl} );
 }
 
 sub shorten {
