@@ -50,8 +50,12 @@ sub startup {
     $r->get('/')->to_named('main#index');
 
     # Actions
-    $r->post('/do/shorten')->to_named('main#shorten');
-
+    if( $self->config->{allow_anonymous_shorten} ) {
+        $r->post('/do/shorten')->to_named('main#shorten');
+    }
+    else {
+        $auth_r->post('/do/shorten')->to_named('main#shorten');
+    }
 
     # Admin
     $r->route('/user/login')->to_named('admin#login');
