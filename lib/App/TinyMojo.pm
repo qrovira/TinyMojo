@@ -121,7 +121,7 @@ sub _token_to_id {
 # the real stuff
 #
 
-our @BASE = ('a'..'z', 'A'..'Z', '0'..'9', qw/ $ - _ . + ! * ' ( ) /);
+our @BASE = ('a'..'z', 'A'..'Z', '0'..'9', qw/ - _ . /);
 
 our %REVERSE = map { $BASE[$_] => $_ } 0..$#BASE;
 
