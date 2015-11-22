@@ -66,8 +66,8 @@ sub startup {
     my $r = $self->routes;
     $r->add_shortcut( to_named => sub { return shift->to(@_)->name($_[0]); });
 
-    my $auth_r = $r->bridge->to( 'admin#check_auth' );
-    my $admin_r = $r->bridge->to( 'admin#check_admin' );
+    my $auth_r = $r->under->to( 'admin#check_auth' );
+    my $admin_r = $r->under->to( 'admin#check_admin' );
 
     # Normal route to controller
     $r->get('/')->to_named('main#index');
