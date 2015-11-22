@@ -1,5 +1,4 @@
 {
-    // Nav bar
     "Home": {
         "ca": "Home"
     },
@@ -7,7 +6,7 @@
         "ca": "Usuari"
     },
 
-    // Shorten
+
     "Link to shorten": {
         "ca": "Adreça a escurçar"
     },
@@ -24,7 +23,7 @@
         "ca": "La teva adreça curta és:"
     },
 
-    // User login
+
     "User name": {
         "ca": "Nom d'usuari"
     },
@@ -50,7 +49,7 @@
         "ca": "Sessió tancada!"
     },
 
-    // Dashboard
+
     "Dashboard": {
         "ca": "Panell"
     },
@@ -64,7 +63,7 @@
         "ca": "URL llarga"
     },
 
-    // Profile
+
     "Profile": {
         "ca": "Perfil"
     },
@@ -75,7 +74,7 @@
         "ca": "Desar"
     },
 
-    // All URLs
+
     "List all URLs": {
         "ca": "Totes les URLs"
     },
