@@ -183,6 +183,16 @@ during shortening or lookup.
 
 It also avoids sequentiality on the generated URLs by using L<Crypt::Skip32>.
 
+=head2 DOCKER DEPLOY
+
+Docker files are provided to bootstrap a working Tinymojo, including an image for
+the webapp that will run on hypnotoad, and a separate instance for the database,
+initialized with empty tables and a I<admin>/I<password> user.
+
+You can manage it via C<docker-compose> (eg. C<docker-compose up -d>).
+
+Remember to update all configuration, session, datbase and user secrets!
+
 =head2 CONFIGURATION
 
 All configuration is done through the default L<Mojolicious::Plugin::Config> plugin,

@@ -12,6 +12,16 @@ during shortening or lookup.
 
 It also avoids sequentiality on the generated URLs by using [Crypt::Skip32](https://metacpan.org/pod/Crypt::Skip32).
 
+## DOCKER DEPLOY
+
+Docker files are provided to bootstrap a working Tinymojo, including an image for
+the webapp that will run on hypnotoad, and a separate instance for the database,
+initialized with empty tables and a _admin_/_password_ user.
+
+You can manage it via `docker-compose` (eg. `docker-compose up -d`).
+
+Remember to update all configuration, session, datbase and user secrets!
+
 ## CONFIGURATION
 
 All configuration is done through the default [Mojolicious::Plugin::Config](https://metacpan.org/pod/Mojolicious::Plugin::Config) plugin,
