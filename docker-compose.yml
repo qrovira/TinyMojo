@@ -1,0 +1,15 @@
+mysql:
+    build: .
+    dockerfile: Dockerfile.mysql
+    environment:
+        - MYSQL_DATABASE=tinymojo
+        - MYSQL_USER=tinymojo
+        - MYSQL_PASSWORD=tinymojo
+        - MYSQL_ROOT_PASSWORD=tinymojo
+
+webapp:
+    build: .
+    ports:
+        - 8080:8080
+    links:
+        - mysql
