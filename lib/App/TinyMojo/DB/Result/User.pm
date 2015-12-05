@@ -30,7 +30,7 @@ __PACKAGE__->add_columns(
         size => 255,
         encode_column => 1,
         encode_class => 'Digest',
-        encode_args => { algorithm => 'SHA-1', format => 'hex', salt_length => 16 },
+        encode_args => { algorithm => 'SHA-512', format => 'hex', salt_length => 16 },
         encode_check_method => 'check_password',
     },
     'admin',
