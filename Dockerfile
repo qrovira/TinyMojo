@@ -25,4 +25,4 @@ WORKDIR /usr/src/tinymojo
 
 EXPOSE 8080
 
-CMD [ "hypnotoad", "script/app_tiny_mojo", "-f" ]
+CMD [ "hypnotoad", "script/tiny_mojo", "-f" ]

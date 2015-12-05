@@ -1,4 +1,4 @@
-package App::TinyMojo::Controller::Admin;
+package TinyMojo::Controller::Admin;
 use Mojo::Base 'Mojolicious::Controller';
 
 use String::Random;

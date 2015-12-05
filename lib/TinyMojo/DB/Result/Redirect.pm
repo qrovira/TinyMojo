@@ -1,5 +1,5 @@
 use utf8;
-package App::TinyMojo::DB::Result::Redirect;
+package TinyMojo::DB::Result::Redirect;
 
 use strict;
 use warnings;

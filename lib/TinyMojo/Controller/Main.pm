@@ -1,4 +1,4 @@
-package App::TinyMojo::Controller::Main;
+package TinyMojo::Controller::Main;
 use Mojo::Base 'Mojolicious::Controller';
 
 sub redirect {
@@ -7,7 +7,7 @@ sub redirect {
     my $id = $self->token_to_id( $shorturl );
     my $url = $self->db('Url')->find($id);
 
-    return $self->render_not_found
+    return $self->reply->not_found
         unless $url;
 
     if( $self->app->config->{track_visits} ) {
@@ -47,7 +47,7 @@ sub shorten {
             html => { url => $url, shorturl => $shorturl },
         );
     } else {
-        $self->render_exception;
+        $self->reply->exception;
     }
 
 }

@@ -1,11 +1,11 @@
-package App::TinyMojo;
+package TinyMojo;
 use Mojo::Base 'Mojolicious';
 
 # Could use Cryp::Skipjack for 64 bit block sizes
 use Crypt::Skip32;
 
 use DBIx::Connector;
-use App::TinyMojo::DB;
+use TinyMojo::DB;
 
 # This method will run once at server start
 sub startup {
@@ -19,7 +19,7 @@ sub startup {
     my $connector = DBIx::Connector->new( map { $dbconf->{$_} } qw/ dsn username password / );
     $self->helper( db => sub {
         my ($self, $resultset) = @_;
-        my $dbh = App::TinyMojo::DB->connect( sub { return $connector->dbh } );
+        my $dbh = TinyMojo::DB->connect( sub { return $connector->dbh } );
         return $resultset ? $dbh->resultset($resultset) : $dbh;
     } );
 
@@ -37,7 +37,7 @@ sub startup {
     $self->secrets( delete $self->config->{secrets} );
 
     # Controller namespace
-    $self->routes->namespaces(['App::TinyMojo::Controller']);
+    $self->routes->namespaces(['TinyMojo::Controller']);
 
     # Helpers to map IDs to tokens and back
     my $cryptokey = delete $self->config->{crypt_key};
@@ -171,7 +171,7 @@ sub _decrypt($$) {
 
 =head1 NAME
 
-App::TinyMojo - URL shortener application
+TinyMojo - URL shortener application
 
 =head1 SYNOPSIS
 

@@ -1,4 +1,4 @@
-package App::TinyMojo::DB::ResultSet::Url;
+package TinyMojo::DB::ResultSet::Url;
 
 use strict;
 use warnings;
