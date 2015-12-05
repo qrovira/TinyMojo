@@ -19,10 +19,10 @@ RUN cpanm \
     https://github.com/qrovira/devpanels.git
     
 
-COPY . /usr/src/tinymojo
-
 WORKDIR /usr/src/tinymojo
 
 EXPOSE 8080
 
 CMD [ "hypnotoad", "script/tiny_mojo", "-f" ]
+
+COPY . /usr/src/tinymojo
