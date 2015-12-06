@@ -16,7 +16,7 @@ my $c = $t->app->build_controller;
 
 my %seen;
 my %seen_ids;
-for(1..1000) {
+for(1..10000) {
     my $id; $id = int(rand(100_000))
         while( !defined($id) || $seen_ids{$id}++ );
     my $token = $c->id_to_token( $id );
