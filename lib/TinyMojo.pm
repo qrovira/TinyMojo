@@ -174,6 +174,8 @@ sub _decrypt($$) {
 
 TinyMojo - URL shortener application
 
+=for markdown [![Build Status](https://travis-ci.org/qrovira/TinyMojo.svg?branch=master)](https://travis-ci.org/qrovira/TinyMojo)
+
 =head1 SYNOPSIS
 
 Small proof of concept L<Mojolicious> app for URL shortening.

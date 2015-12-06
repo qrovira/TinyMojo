@@ -1,6 +1,8 @@
 # NAME
 
-App::TinyMojo - URL shortener application
+TinyMojo - URL shortener application
+
+[![Build Status](https://travis-ci.org/qrovira/TinyMojo.svg?branch=master)](https://travis-ci.org/qrovira/TinyMojo)
 
 # SYNOPSIS
 
