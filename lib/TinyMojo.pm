@@ -141,7 +141,8 @@ sub _base_X_to_int($) {
     my @intX = split '', shift;
     my $int10 = 0;
 
-    while( my $d = shift @intX ) {
+    while( @intX ) {
+        my $d = shift @intX;
         $int10 *= @BASE;
         return -1 unless exists $REVERSE{ $d };
         $int10 += $REVERSE{ $d };
