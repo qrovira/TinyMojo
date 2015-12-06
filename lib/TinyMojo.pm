@@ -20,6 +20,12 @@ sub startup {
     $self->helper( db => sub {
         my ($self, $resultset) = @_;
         my $dbh = TinyMojo::DB->connect( sub { return $connector->dbh } );
+
+        if( $self->config->{debugging} ) {
+            $dbh->storage->debug(1);
+            $dbh->storage->debugcb( sub { push @{ $self->stash->{devpanels}{SQL} //= [] }, $_[1]; } );
+        }
+
         return $resultset ? $dbh->resultset($resultset) : $dbh;
     } );
 
