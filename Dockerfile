@@ -12,7 +12,8 @@ RUN cpanm \
     Locale::Wolowitz \
     Mojolicious::Plugin::Wolowitz \
     Data::UUID::MT \
-    DBD::mysql
+    DBD::mysql \
+    IO::Socket::SSL
 
 RUN cpanm \
     https://github.com/qrovira/BootstrapHelpers.git \
@@ -22,6 +23,7 @@ RUN cpanm \
 WORKDIR /usr/src/tinymojo
 
 EXPOSE 8080
+EXPOSE 8081
 
 CMD [ "hypnotoad", "script/tiny_mojo", "-f" ]
 
