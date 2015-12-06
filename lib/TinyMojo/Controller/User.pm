@@ -12,7 +12,7 @@ sub check_auth {
 
     return 1 if $c->logged_in;
 
-    $c->bs_flash( danger => $c->loc('Not authorized'), class => 'danger' );
+    $c->bs_flash( danger => $c->l('Not authorized'), class => 'danger' );
     $c->redirect_to('user#login');
 
     return undef;
@@ -24,7 +24,7 @@ sub check_admin {
     return 1 if $c->admin;
     
     $c->bs_flash_to(
-        danger => $c->loc('Not authorized'),
+        danger => $c->l('Not authorized'),
         ($c->logged_in ? 'main#shorten' : 'user#login')
     );
 
@@ -86,7 +86,7 @@ sub logout {
     my ($self) = @_;
 
     $self->session( user => undef );
-    $self->bs_flash_to( success => $self->loc('Logged out!'), 'user#login' );
+    $self->bs_flash_to( success => $self->l('Logged out!'), 'user#login' );
 }
 
 sub login {
@@ -101,10 +101,10 @@ sub login {
             my $sdata = { $user->get_inflated_columns };
             delete $sdata->{password};
             $self->session( user => $sdata );
-            return $self->bs_flash_to( success => $self->loc('Logged in!'), 'user#dashboard' );
+            return $self->bs_flash_to( success => $self->l('Logged in!'), 'user#dashboard' );
         }
 
-        $self->bs_notify( danger => $self->loc('Invalid login') );
+        $self->bs_notify( danger => $self->l('Invalid login') );
     }
 
 }
@@ -127,7 +127,7 @@ sub signup {
             my $sdata = { $user->get_inflated_columns };
             delete $sdata->{password};
             $self->session( user => $sdata );
-            $self->bs_flash_to( success => $self->loc('User created!'), 'user#dashboard' );
+            $self->bs_flash_to( success => $self->l('User created!'), 'user#dashboard' );
         } else {
             $self->render->exception;
         }
@@ -144,7 +144,7 @@ sub profile {
     unless( $user ) {
         # Something really wrong.. deleted user?
         $self->session( user => undef );
-        return $self->bs_flash_to( danger => $self->loc('Something wrong, sorry!'), 'user#login' );
+        return $self->bs_flash_to( danger => $self->l('Something wrong, sorry!'), 'user#login' );
     }
 
     if( $validation->has_data ) {
@@ -157,9 +157,9 @@ sub profile {
             my %values = %{ $validation->output };
             delete $values{password_again};
             if( $user->update( \%values ) ) {
-                $self->bs_notify( success => $self->loc('Profile updated!') );
+                $self->bs_notify( success => $self->l('Profile updated!') );
             } else {
-                $self->bs_notify( danger => $self->loc('Error updating profile') );
+                $self->bs_notify( danger => $self->l('Error updating profile') );
             }
         }
     }

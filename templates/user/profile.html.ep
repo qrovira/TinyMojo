@@ -1,14 +1,14 @@
-% extends 'user/base', title => loc('Profile');
+% extends 'user/base', title => l('Profile');
 % content main => begin
 
-  <h3><%= loc('Profile') %></h3>
+  <h3><%= l('Profile') %></h3>
 %=  form_for profile => ( method => 'POST', role => "form" ) => begin
 %=   hidden_field id => $user->{id}
-%=   bs_form_group [login => 'text', placeholder => loc('Type username...')] => ( label => loc('User name') )
-%=   bs_form_group [email => 'email', placeholder => loc('my.email@example.com')] => ( label => loc('eMail address') )
-%=   bs_form_group [password => 'password'] => ( label => loc('Password') )
-%=   bs_form_group [password_again => 'password'] => ( label => loc('%1 (again)', loc('Password')) )
-%=   bs_submit loc('Save')
+%=   bs_form_group [login => 'text', placeholder => l('Type username...')] => ( label => l('User name') )
+%=   bs_form_group [email => 'email', placeholder => l('my.email@example.com')] => ( label => l('eMail address') )
+%=   bs_form_group [password => 'password'] => ( label => l('Password') )
+%=   bs_form_group [password_again => 'password'] => ( label => l('[_1] (again)', l('Password')) )
+%=   bs_submit l('Save')
 %=  end
 
 %= end

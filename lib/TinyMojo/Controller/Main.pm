@@ -46,7 +46,7 @@ sub shorten {
 
     return $self->respond_to(
         json => { json => { status => "error", errors => [ $validation->failed ] } },
-        html => sub { $self->bs_notify( danger => $self->loc('Failed to shorten URL, please check errors') ); },
+        html => sub { $self->bs_notify( danger => $self->l('Failed to shorten URL, please check errors') ); },
     ) if $validation->has_error;
 
     if( my $url = $self->db('Url')->create({ longurl => $longurl, user_id => $user_id }) ) {
@@ -56,7 +56,7 @@ sub shorten {
         $self->respond_to( 
             json => { json => { status => "ok", shorturl => $shorturl } },
             html => sub {
-                $self->bs_flash_to( success => $self->loc('URL shortened!'), 'main#shortened', shorturl => $token);
+                $self->bs_flash_to( success => $self->l('URL shortened!'), 'main#shortened', shorturl => $token);
             },
         );
     }

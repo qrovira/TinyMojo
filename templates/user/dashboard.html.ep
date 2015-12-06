@@ -1,7 +1,7 @@
-% extends 'user/base', title => loc('Your URLs');
+% extends 'user/base', title => l('Your URLs');
 % content main => begin
 
-<h3><%= loc('Your last generated URLs') %></h3>
+<h3><%= l('Your last shortened URLs') %></h3>
 %= include 'user/blocks/url_list', urls => $urls, hits => $hits, show_user => 0
 
 % end

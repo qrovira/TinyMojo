@@ -16,12 +16,12 @@
     <div class="container">
       <div class="header">
         <%= bs_nav "nav nav-pills navbar-right" => begin %>
-          <%= bs_nav_item loc('Shorten') => 'main#shorten' %>
+          <%= bs_nav_item l('Shorten') => 'main#shorten' %>
 % if( logged_in ) {
-          <%= bs_nav_item loc('User') => 'user#dashboard' %>
+          <%= bs_nav_item l('User') => 'user#dashboard' %>
 % } else {
-          <%= bs_nav_item loc('Log in') => 'user#login' %>
-          <%= bs_nav_item loc('Sign up') => 'user#signup' %>
+          <%= bs_nav_item l('Log in') => 'user#login' %>
+          <%= bs_nav_item l('Sign up') => 'user#signup' %>
 % }
         <% end %>
         <h1><%= $config->{site_name} %> - <%= $title %></h1>

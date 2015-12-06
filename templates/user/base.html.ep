@@ -1,13 +1,13 @@
 % layout 'default';
-% title loc('Dashboard - %1', $title);
+% title l('Dashboard - [_1]', $title);
 
 %= bs_nav "nav nav-tabs" => begin
-%=  bs_nav_item loc('Dashboard') => 'user#dashboard';
-%=  bs_nav_item loc('Profile') => 'user#profile';
+%=  bs_nav_item l('Dashboard') => 'user#dashboard';
+%=  bs_nav_item l('Profile') => 'user#profile';
 %   if( admin ) {
-%=   bs_nav_item loc('List all URLs') => 'user#list_urls';
+%=   bs_nav_item l('List all URLs') => 'user#list_urls';
 %   }
-%=  bs_nav_item loc('Log out') => 'user#logout';
+%=  bs_nav_item l('Log out') => 'user#logout';
 %= end
 
 %= content main => begin

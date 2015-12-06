@@ -1,13 +1,13 @@
-% extends 'user/base', title => loc('Sign up');
+% extends 'user/base', title => l('Sign up');
 % content main => begin
 
-  <h3><%= loc('Sign up') %></h3>
+  <h3><%= l('Sign up') %></h3>
 %=  form_for 'user#signup' => ( method => 'POST', role => "form" ) => begin
-%=   bs_form_group [login => 'text', placeholder => loc('Type username...')] => ( label => loc('User name') )
-%=   bs_form_group [email => 'email', placeholder => loc('my.email@example.com')] => ( label => loc('eMail address') )
-%=   bs_form_group [password => 'password'] => ( label => loc('Password') )
-%=   bs_form_group [password_again => 'password'] => ( label => loc('%1 (again)', loc('Password')) )
-%=   bs_submit loc('Sign up')
+%=   bs_form_group [login => 'text', placeholder => l('Type username...')] => ( label => l('User name') )
+%=   bs_form_group [email => 'email', placeholder => l('my.email@example.com')] => ( label => l('eMail address') )
+%=   bs_form_group [password => 'password'] => ( label => l('Password') )
+%=   bs_form_group [password_again => 'password'] => ( label => l('[_1] (again)', l('Password')) )
+%=   bs_submit l('Sign up')
 %=  end
 
 %= end

@@ -1,6 +1,6 @@
 % layout 'default';
 % title $config->{site_mission};
 %= form_for 'main#shorten' => ( method => 'POST', role => "form" ) => begin
-%=  bs_form_group [longurl => 'url', placeholder => loc('Enter URL to shorten...'), required => "required"] => ( label => loc('Link to shorten') )
-%=  bs_submit loc('Shorten')
+%=  bs_form_group [longurl => 'url', placeholder => l('Enter URL to shorten...'), required => "required"] => ( label => l('Link to shorten') )
+%=  bs_submit l('Shorten')
 %= end

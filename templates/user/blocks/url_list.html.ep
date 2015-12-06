@@ -1,12 +1,12 @@
   <table class="table table-condensed table-striped">
     <thead>
       <tr>
-        <th><%= loc('ID') %></th>
-        <th><%= loc('Short URL') %></th>
-        <th><%= loc('Long URL') %></th>
-        <th><%= loc('Hits') %></th>
+        <th><%= l('ID') %></th>
+        <th><%= l('Short URL') %></th>
+        <th><%= l('Long URL') %></th>
+        <th><%= l('Hits') %></th>
 % if( $show_user ) {
-        <th><%= loc('User') %></th>
+        <th><%= l('User') %></th>
 % }
       </tr>
     </thead>

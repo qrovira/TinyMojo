@@ -1,13 +1,13 @@
 % layout 'default';
 % title $config->{site_mission};
-<h2><%= loc('Log in') %></h2>
+<h2><%= l('Log in') %></h2>
 % if( my $message = stash 'error' ) {
   <div class="alert alert-danger">
     %= $message
   </div>
 % }
 %= form_for login => ( method => 'POST', role => "form" ) => begin
-%=  bs_form_group [login => 'text', placeholder => loc('Type username...')] => ( label => loc('User name') )
-%=  bs_form_group [password => 'password'] => ( label => loc('Password') )
-%=  bs_submit loc('Log in')
+%=  bs_form_group [login => 'text', placeholder => l('Type username...')] => ( label => l('User name') )
+%=  bs_form_group [password => 'password'] => ( label => l('Password') )
+%=  bs_submit l('Log in')
 %= end

@@ -30,8 +30,7 @@ sub startup {
     } );
 
     # Translations
-    $self->plugin('wolowitz');
-    $self->defaults( language => $self->config->{language} );
+    $self->plugin('I18N' => $self->config->{i18n});
 
     # Bootstrap helpers
     $self->plugin('BootstrapHelpers', layout => 1);
