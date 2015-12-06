@@ -23,6 +23,12 @@ __PACKAGE__->add_columns(
         is_nullable => 0,
         size => 255,
     },
+    'email',
+    {
+        data_type => 'varchar',
+        is_nullable => 0,
+        size => 100,
+    },
     'password',
     {
         data_type => 'varchar',

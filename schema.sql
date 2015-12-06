@@ -8,6 +8,7 @@ CREATE TABLE url (
 CREATE TABLE `user` (
   id int auto_increment primary key,
   login varchar(255) not null,
+  email varchar(100) not null,
   password varchar(512),
   admin bool not null default 0
 );

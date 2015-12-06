@@ -91,6 +91,7 @@ The database only requires two tables: _url_ and _user_
     CREATE TABLE `user` (
       id int auto_increment primary key,
       login varchar(255) not null,
+      email varchar(100) not null,
       password varchar(512),
       admin bool not null default 0,
     );

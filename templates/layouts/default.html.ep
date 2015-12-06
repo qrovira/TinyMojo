@@ -21,6 +21,7 @@
           <%= bs_nav_item loc('User') => 'user#dashboard' %>
 % } else {
           <%= bs_nav_item loc('Log in') => 'user#login' %>
+          <%= bs_nav_item loc('Sign up') => 'user#signup' %>
 % }
         <% end %>
         <h1><%= $config->{site_name} %> - <%= $title %></h1>

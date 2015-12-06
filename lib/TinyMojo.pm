@@ -3,7 +3,7 @@ use Mojo::Base 'Mojolicious';
 
 # Could use Cryp::Skipjack for 64 bit block sizes
 use Crypt::Skip32;
-
+use Email::Valid;
 use DBIx::Connector;
 use TinyMojo::DB;
 
@@ -65,6 +65,21 @@ sub startup {
         $self->helper( generate_uuid => sub { return uc join "-", unpack("H8H4H4H4H12", $next->());  } );
     }
 
+    # Custom validations
+    my $validator = $self->validator;
+    $validator->add_check( password => sub {
+        return 1,'Password too short' unless length $_[2] > 7;
+        return 2,'Password must contain numbers' unless $_[2] =~ m#[0-9]#;
+        return 3,'Password must contain lower case letters' unless $_[2] =~ m#[a-z]#;
+        return 4,'Password must contain upper case letters' unless $_[2] =~ m#[A-Z]#;
+        return 0;
+    } );
+    $validator->add_check( username_not_taken => sub {
+        my ($validation, $name, $value) = @_;
+        return !!$self->db('User')->find({ login => $value });
+    } );
+    $validator->add_check( email => sub { return !Email::Valid->address( $_[2] ); } );
+
     # Router
     my $r = $self->routes;
     $r->add_shortcut( to_named => sub { return shift->to(@_)->name($_[0]); });
@@ -79,6 +94,7 @@ sub startup {
 
     # User
     $r->route('/user/login')->to_named('user#login');
+    $r->route('/user/signup')->to_named('user#signup');
     $auth_r->get('/user/logout')->to_named('user#logout');
     $auth_r->get('/user/dashboard')->to_named('user#dashboard');
     $auth_r->route('/user/profile')->to_named('user#profile');
@@ -265,6 +281,7 @@ The database only requires two tables: I<url> and I<user>
   CREATE TABLE `user` (
     id int auto_increment primary key,
     login varchar(255) not null,
+    email varchar(100) not null,
     password varchar(512),
     admin bool not null default 0,
   );

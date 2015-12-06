@@ -1,7 +1,6 @@
 package TinyMojo::Controller::User;
 use Mojo::Base 'Mojolicious::Controller';
 
-use String::Random;
 use Crypt::Passwd::XS 'unix_sha512_crypt';
 
 #
@@ -82,6 +81,13 @@ sub list_urls {
     );
 }
 
+sub logout {
+    my ($self) = @_;
+
+    $self->session( user => undef );
+    $self->bs_flash_to( success => $self->loc('Logged out!'), 'user#login' );
+}
+
 sub login {
     my ($self) = @_;
     my $login = $self->param('login');
@@ -102,11 +108,29 @@ sub login {
 
 }
 
-sub logout {
-    my ($self) = @_;
+sub signup {
+    my $self = shift;
+    my $validation = $self->validation;
 
-    $self->session( user => undef );
-    $self->bs_flash_to( success => $self->loc('Logged out!'), 'user#login' );
+    return $self->render unless $validation->has_data;
+
+    $validation->required('login')->size(3,30)->like(qr#^[0-9a-z]+$#i)->username_not_taken;
+    $validation->required('email')->email;
+    $validation->required('password_again')->equal_to('password')
+        if $validation->required('password')->password->is_valid;
+
+    unless( $validation->has_error ) {
+        my %data = %{ $validation->output };
+        delete $data{password_again};
+        if( my $user = $self->db('User')->create( \%data ) ) {
+            my $sdata = { $user->get_inflated_columns };
+            delete $sdata->{password};
+            $self->session( user => $sdata );
+            $self->bs_flash_to( success => $self->loc('User created!'), 'user#dashboard' );
+        } else {
+            $self->render->exception;
+        }
+    }
 }
 
 sub profile {
@@ -124,8 +148,9 @@ sub profile {
 
     if( $validation->has_data ) {
         $validation->required('login')->like(qr/^\w+$/);
-        $validation->required('password')->size(6,200);
-        $validation->required('password_again')->equal_to('password');
+        $validation->required('email')->email;
+        $validation->required('password_again')->equal_to('password')
+            if $validation->optional('password')->password->is_valid;
 
         unless( $validation->has_error ) {
             my %values = %{ $validation->output };
@@ -142,6 +167,9 @@ sub profile {
 
     $self->param( login => $user->login )
         unless $self->param("login");
+
+    $self->param( email => $user->email )
+        unless $self->param("email");
 }
 
 
