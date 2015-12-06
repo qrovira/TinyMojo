@@ -23,6 +23,6 @@ WORKDIR /usr/src/tinymojo
 
 EXPOSE 8080
 
-CMD [ "hypnotoad", "script/tiny_mojo", "-f" ]
+CMD [ "hypnotoad", "script/tiny_mojo", "-f", "--listen", "http://0.0.0.0:8080" ]
 
 COPY . /usr/src/tinymojo

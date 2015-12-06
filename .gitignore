@@ -1,3 +1,4 @@
 *.swp
 log
 script/hypnotoad.pid
+docker-compose.override.yml
