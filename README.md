@@ -29,7 +29,7 @@ Remember to update all configuration, session, datbase and user secrets!
 All configuration is done through the default [Mojolicious::Plugin::Config](https://metacpan.org/pod/Mojolicious::Plugin::Config) plugin,
 which you can see on the `app-tiny_mojo.conf` file.
 
-There you can set the encryption key (10 bytes), along with the database settings.
+There you can set the encryption key (10 bytes, 20 hex chars), along with the database settings.
 
 ### Example configuration
 
@@ -46,8 +46,8 @@ There you can set the encryption key (10 bytes), along with the database setting
             'heregoesyoursecret'
         ],
 
-        # Block size for Skip32 or Skipjack is 10 bytes
-        crypt_key => '1234567890',
+        # Block size for Skip32 or Skipjack is 10 bytes. Key in hex.
+        crypt_key => '1337b33f0000feeb7331',
         
         # Some site vars
         language => 'en',

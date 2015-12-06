@@ -40,7 +40,10 @@ sub startup {
     $self->routes->namespaces(['TinyMojo::Controller']);
 
     # Helpers to map IDs to tokens and back
-    my $cryptokey = delete $self->config->{crypt_key};
+    my $hex_cryptokey = delete $self->config->{crypt_key};
+    die "Invalid cryptokey: it should be 20 hexadecimal chars"
+        unless $hex_cryptokey =~ m#^[0-9a-f]{20}$#;
+    my $cryptokey = pack("H20", $hex_cryptokey);
     $self->helper( id_to_token => sub { _id_to_token(@_, $cryptokey); } );
     $self->helper( token_to_id => sub { _token_to_id(@_, $cryptokey); } );
     $self->helper( short_url => sub {
@@ -201,7 +204,7 @@ Remember to update all configuration, session, datbase and user secrets!
 All configuration is done through the default L<Mojolicious::Plugin::Config> plugin,
 which you can see on the F<app-tiny_mojo.conf> file.
 
-There you can set the encryption key (10 bytes), along with the database settings.
+There you can set the encryption key (10 bytes, 20 hex chars), along with the database settings.
 
 =head3 Example configuration
 
@@ -218,8 +221,8 @@ There you can set the encryption key (10 bytes), along with the database setting
           'heregoesyoursecret'
       ],
 
-      # Block size for Skip32 or Skipjack is 10 bytes
-      crypt_key => '1234567890',
+      # Block size for Skip32 or Skipjack is 10 bytes. Key in hex.
+      crypt_key => '1337b33f0000feeb7331',
       
       # Some site vars
       language => 'en',
