@@ -1,5 +1,7 @@
 % extends 'admin/base', title => loc('Last URLs');
 % content main => begin
-  <h3><%= loc('List of last %1 short URLs generated',100) %></h3>
-  %= include 'admin/blocks/url_list', urls => $urls, hits => $hits
+
+<h3><%= loc('List of last %1 short URLs generated',100) %></h3>
+%= include 'admin/blocks/url_list', urls => $urls, hits => $hits
+
 % end

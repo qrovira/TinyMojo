@@ -1,9 +1,6 @@
 % layout 'default';
 % title $config->{site_mission};
 %= form_for 'main#shorten' => ( method => 'POST', role => "form" ) => begin
-  <div class="form-group">
-    <label for="longurl"><%= loc('Link to shorten') %></label>
-    <input type="url" name="longurl" class="form-control" placeholder="<%= loc('Enter URL to shorten...') %>"/>
-  </div>
-  <button type="submit" class="button .btn-lg"><%= loc('Shorten') %></button>
-% end
+%=  bs_form_group [longurl => 'text', placeholder => loc('Enter URL to shorten...')] => ( label => loc('Link to shorten') )
+%=  bs_submit loc('Shorten')
+%= end
