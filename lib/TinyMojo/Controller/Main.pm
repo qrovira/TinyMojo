@@ -39,20 +39,17 @@ sub shorten {
     my $user_id = $self->logged_in ? $self->session('user')->{id} : \"DEFAULT";
 
     my $validation = $self->validation;
+
+    return $self->render unless $validation->has_data;
+
     $validation->required('longurl')->like(qr#^(?:\w+)://.*$#); # Just a naive check
 
-    if( !$validation->has_data ) {
-        $self->render;
-    }
-    elsif( $validation->has_error ) {
-        $self->respond_to(
-            json => { json => { status => "error", errors => [ $validation->failed ] } },
-            html => sub {
-                $self->bs_notify( danger => $self->loc('Failed to shorten URL, please check errors') );
-            },
-        );
-    }
-    elsif( my $url = $self->db('Url')->create({ longurl => $longurl, user_id => $user_id }) ) {
+    return $self->respond_to(
+        json => { json => { status => "error", errors => [ $validation->failed ] } },
+        html => sub { $self->bs_notify( danger => $self->loc('Failed to shorten URL, please check errors') ); },
+    ) if $validation->has_error;
+
+    if( my $url = $self->db('Url')->create({ longurl => $longurl, user_id => $user_id }) ) {
         my $token = $self->id_to_token( $url->id );
         my $shorturl = $self->url_for( '/'.$token )->to_abs;
 
