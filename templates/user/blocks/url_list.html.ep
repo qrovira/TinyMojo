@@ -5,6 +5,9 @@
         <th><%= loc('Short URL') %></th>
         <th><%= loc('Long URL') %></th>
         <th><%= loc('Hits') %></th>
+% if( $show_user ) {
+        <th><%= loc('User') %></th>
+% }
       </tr>
     </thead>
   % foreach my $url ( @{ $urls // [] } ) {
@@ -14,6 +17,9 @@
       <td><%= link_to $short => $short %></td>
       <td><%= $url->longurl %></td>
       <td><%= $hits->{$url->id} // 0 %></td>
+% if( $show_user ) {
+      <td><%= ($url->user ? $url->user->login : "") %></td>
+% }
     </tr>
   % }
   </table>

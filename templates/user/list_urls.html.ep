@@ -2,6 +2,6 @@
 % content main => begin
 
 <h3><%= loc('List of last %1 short URLs generated',100) %></h3>
-%= include 'user/blocks/url_list', urls => $urls, hits => $hits
+%= include 'user/blocks/url_list', urls => $urls, hits => $hits, show_user => 1
 
 % end
