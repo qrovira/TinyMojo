@@ -3,8 +3,10 @@ sudo: required
 services:
     - docker
 
-script:
+before_install:
     - docker-compose build
     - docker-compose up -d
     - docker ps
-    - docker exec script/tiny_mojo test
+
+script:
+    - docker exec tinymojo_webapp_1 script/tiny_mojo test
