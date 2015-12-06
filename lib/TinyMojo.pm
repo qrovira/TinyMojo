@@ -69,8 +69,8 @@ sub startup {
     my $r = $self->routes;
     $r->add_shortcut( to_named => sub { return shift->to(@_)->name($_[0]); });
 
-    my $auth_r = $r->under->to( 'admin#check_auth' );
-    my $admin_r = $r->under->to( 'admin#check_admin' );
+    my $auth_r = $r->under->to( 'user#check_auth' );
+    my $admin_r = $r->under->to( 'user#check_admin' );
 
     # Normal route to controller
     $r->get('/')->to_named('main#index');
@@ -83,12 +83,12 @@ sub startup {
         $auth_r->post('/do/shorten')->to_named('main#shorten');
     }
 
-    # Admin
-    $r->route('/user/login')->to_named('admin#login');
-    $auth_r->get('/user/logout')->to_named('admin#logout');
-    $auth_r->get('/user/dashboard')->to_named('admin#dashboard');
-    $auth_r->route('/user/profile')->to_named('admin#profile');
-    $admin_r->get('/user/admin/list_urls')->to_named('admin#list_urls');
+    # User
+    $r->route('/user/login')->to_named('user#login');
+    $auth_r->get('/user/logout')->to_named('user#logout');
+    $auth_r->get('/user/dashboard')->to_named('user#dashboard');
+    $auth_r->route('/user/profile')->to_named('user#profile');
+    $admin_r->get('/user/admin/list_urls')->to_named('user#list_urls');
 
     # Handle short url
     $r->get('/:shorturl')->to_named('main#redirect');

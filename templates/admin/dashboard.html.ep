@@ -1,7 +1,0 @@
-% extends 'admin/base', title => loc('Your URLs');
-% content main => begin
-
-<h3><%= loc('Your last generated URLs') %></h3>
-%= include 'admin/blocks/url_list', urls => $urls, hits => $hits
-
-% end

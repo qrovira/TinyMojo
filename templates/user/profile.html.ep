@@ -1,4 +1,4 @@
-% extends 'admin/base', title => loc('Profile');
+% extends 'user/base', title => loc('Profile');
 % content main => begin
 
   <h3><%= loc('Profile') %></h3>

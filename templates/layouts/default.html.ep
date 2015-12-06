@@ -17,7 +17,7 @@
       <div class="header">
         <%= bs_nav "nav nav-pills navbar-right" => begin %>
           <%= bs_nav_item loc('Home') => 'main#index' %>
-          <%= bs_nav_item loc('User') => 'admin#dashboard' %>
+          <%= bs_nav_item loc('User') => 'user#dashboard' %>
         <% end %>
         <h1><%= $config->{site_name} %> - <%= $title %></h1>
       </div>

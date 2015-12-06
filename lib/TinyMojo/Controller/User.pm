@@ -1,4 +1,4 @@
-package TinyMojo::Controller::Admin;
+package TinyMojo::Controller::User;
 use Mojo::Base 'Mojolicious::Controller';
 
 use String::Random;
@@ -14,7 +14,7 @@ sub check_auth {
     return 1 if $c->logged_in;
 
     $c->bs_flash( danger => $c->loc('Not authorized'), class => 'danger' );
-    $c->redirect_to('admin#login');
+    $c->redirect_to('user#login');
 
     return undef;
 }
@@ -30,7 +30,7 @@ sub check_admin {
         $c->redirect_to('main#index');
     }
     else {
-        $c->redirect_to('admin#login');
+        $c->redirect_to('user#login');
     }
 
     return undef;
@@ -98,7 +98,7 @@ sub login {
             my $sdata = { $user->get_inflated_columns };
             delete $sdata->{password};
             $self->session( user => $sdata );
-            return $self->bs_flash_to( success => $self->loc('Logged in!'), 'admin#dashboard' );
+            return $self->bs_flash_to( success => $self->loc('Logged in!'), 'user#dashboard' );
         }
 
         $self->bs_notify( danger => $self->loc('Invalid login') );
@@ -110,7 +110,7 @@ sub logout {
     my ($self) = @_;
 
     $self->session( user => undef );
-    $self->bs_flash_to( success => $self->loc('Logged out!'), 'admin#login' );
+    $self->bs_flash_to( success => $self->loc('Logged out!'), 'user#login' );
 }
 
 sub profile {
@@ -123,7 +123,7 @@ sub profile {
     unless( $user ) {
         # Something really wrong.. deleted user?
         $self->session( user => undef );
-        return $self->bs_flash_to( danger => $self->loc('Something wrong, sorry!'), 'admin#login' );
+        return $self->bs_flash_to( danger => $self->loc('Something wrong, sorry!'), 'user#login' );
     }
 
     if( $validation->has_data ) {
