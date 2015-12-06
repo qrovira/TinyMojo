@@ -16,8 +16,12 @@
     <div class="container">
       <div class="header">
         <%= bs_nav "nav nav-pills navbar-right" => begin %>
-          <%= bs_nav_item loc('Home') => 'main#index' %>
+          <%= bs_nav_item loc('Shorten') => 'main#shorten' %>
+% if( logged_in ) {
           <%= bs_nav_item loc('User') => 'user#dashboard' %>
+% } else {
+          <%= bs_nav_item loc('Log in') => 'user#login' %>
+% }
         <% end %>
         <h1><%= $config->{site_name} %> - <%= $title %></h1>
       </div>

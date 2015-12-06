@@ -38,18 +38,46 @@ sub shorten {
     my $longurl = $self->param('longurl');
     my $user_id = $self->logged_in ? $self->session('user')->{id} : \"DEFAULT";
 
-    if( my $url = $self->db('Url')->create({ longurl => $longurl, user_id => $user_id }) ) {
+    my $validation = $self->validation;
+    $validation->required('longurl')->like(qr#^(?:\w+)://.*$#); # Just a naive check
+
+    if( !$validation->has_data ) {
+        $self->render;
+    }
+    elsif( $validation->has_error ) {
+        $self->respond_to(
+            json => { json => { status => "error", errors => [ $validation->failed ] } },
+            html => sub {
+                $self->bs_notify( danger => $self->loc('Failed to shorten URL, please check errors') );
+            },
+        );
+    }
+    elsif( my $url = $self->db('Url')->create({ longurl => $longurl, user_id => $user_id }) ) {
         my $token = $self->id_to_token( $url->id );
         my $shorturl = $self->url_for( '/'.$token )->to_abs;
 
         $self->respond_to( 
-            json => { json => { shorturl => $shorturl } },
-            html => { url => $url, shorturl => $shorturl },
+            json => { json => { status => "ok", shorturl => $shorturl } },
+            html => sub {
+                $self->bs_flash_to( success => $self->loc('URL shortened!'), 'main#shortened', shorturl => $token);
+            },
         );
-    } else {
+    }
+    else {
         $self->reply->exception;
     }
+}
 
+sub shortened {
+    my $self = shift;
+    my $shorturl = $self->param('shorturl');
+    my $id = $self->token_to_id( $shorturl );
+    my $url = $self->db('Url')->find($id);
+
+    return $self->reply->not_found
+        unless $url;
+
+    $self->stash( url => $url, shorturl => $self->url_for($shorturl)->to_abs );
 }
 
 

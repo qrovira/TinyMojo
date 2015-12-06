@@ -24,14 +24,10 @@ sub check_admin {
 
     return 1 if $c->admin;
     
-    $c->bs_flash( danger => $c->loc('Not authorized'), class => 'danger' );
-
-    if($c->logged_in) {
-        $c->redirect_to('main#index');
-    }
-    else {
-        $c->redirect_to('user#login');
-    }
+    $c->bs_flash_to(
+        danger => $c->loc('Not authorized'),
+        ($c->logged_in ? 'main#shorten' : 'user#login')
+    );
 
     return undef;
 }

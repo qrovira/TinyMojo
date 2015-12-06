@@ -71,17 +71,11 @@ sub startup {
 
     my $auth_r = $r->under->to( 'user#check_auth' );
     my $admin_r = $r->under->to( 'user#check_admin' );
-
-    # Normal route to controller
-    $r->get('/')->to_named('main#index');
+    my $shorten_r = $self->config->{allow_anonymous_shorten} ? $r : $auth_r;
 
     # Actions
-    if( $self->config->{allow_anonymous_shorten} ) {
-        $r->post('/do/shorten')->to_named('main#shorten');
-    }
-    else {
-        $auth_r->post('/do/shorten')->to_named('main#shorten');
-    }
+    $shorten_r->any([qw/get post/] => '/')->to_named('main#shorten');
+    $shorten_r->get('/shortened/:shorturl')->to_named('main#shortened');
 
     # User
     $r->route('/user/login')->to_named('user#login');
