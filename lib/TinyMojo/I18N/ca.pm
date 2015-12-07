@@ -22,7 +22,7 @@ our %Lexicon = (
 
     "Dashboard" => "Panell",
     "Dashboard - [_1]" => "Panell - [_1]",
-    "Your last shortened URLs" => "Les teves darreres URLs escurçades",
+    "Your [_1] last shortened URLs" => "Les teves [_1] darreres URLs escurçades",
     "Short URL" => "URL breu",
     "Long URL" => "URL llarga",
     "Hits" => "Visites",

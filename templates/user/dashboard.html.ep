@@ -1,7 +1,7 @@
 % extends 'user/base', title => l('Your URLs');
 % content main => begin
 
-<h3><%= l('Your last shortened URLs') %></h3>
+<h3><%= l('Your [_1] last shortened URLs', $rows) %></h3>
 %= include 'user/blocks/url_list', urls => $urls, hits => $hits, show_user => 0
 
 % end

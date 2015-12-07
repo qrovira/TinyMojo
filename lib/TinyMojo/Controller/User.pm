@@ -39,7 +39,7 @@ sub check_admin {
 sub dashboard {
     my ($self) = @_;
     my $offset = $self->param('offset') // 0;
-    my $rows = $self->param('rows') // 100;
+    my $rows = $self->param('rows') // 10;
     $rows = 100 if $rows > 100;
 
     my $urls = $self->db('Url')->search({
@@ -56,6 +56,7 @@ sub dashboard {
     $self->stash(
         urls => [ $urls->all ],
         hits => \%hits,
+        rows => $rows,
     );
 }
 
@@ -63,7 +64,7 @@ sub dashboard {
 sub list_urls {
     my ($self) = @_;
     my $offset = $self->param('offset') // 0;
-    my $rows = $self->param('rows') // 100;
+    my $rows = $self->param('rows') // 10;
     $rows = 100 if $rows > 100;
 
     my $urls = $self->db('Url')->search({},{
@@ -78,7 +79,8 @@ sub list_urls {
 
     $self->stash(
         urls => [ $urls->all ],
-        hits => \%hits
+        hits => \%hits,
+        rows => $rows,
     );
 }
 
