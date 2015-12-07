@@ -1,5 +1,4 @@
 % layout 'default';
-% title $config->{site_mission};
 <p>
   <%= l('Your new short url is:') %><br>
   <%= link_to "".$shorturl => $shorturl %>

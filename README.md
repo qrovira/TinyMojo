@@ -27,38 +27,52 @@ Remember to update all configuration, session, datbase and user secrets!
 ## CONFIGURATION
 
 All configuration is done through the default [Mojolicious::Plugin::Config](https://metacpan.org/pod/Mojolicious::Plugin::Config) plugin,
-which you can see on the `app-tiny_mojo.conf` file.
+which you can see on the `tiny_mojo.conf` file.
 
 There you can set the encryption key (10 bytes, 20 hex chars), along with the database settings.
 
 ### Example configuration
 
     {
+        # Key size for Skip32 or Skipjack is 10 bytes
+        crypt_key => '1337b33f0000f33b7331',
+    
+        # Some site vars
+        allow_anonymous_shorten => 1,
+        track_visits => 1,
+    
         # Database configuration
         database => {
-            dsn      => "dbi:mysql:dbname=tinymojo",
+            dsn      => "dbi:mysql:dbname=tinymojo;host=mysql",
             username => "tinymojo",
             password => "tinymojo",
         },
-
+    
         # Session encryption secret
         secrets => [
             'heregoesyoursecret'
         ],
-
-        # Block size for Skip32 or Skipjack is 10 bytes. Key in hex.
-        crypt_key => '1337b33f0000feeb7331',
-        
-        # Some site vars
-        language => 'en',
-        site_name => 'TinyMojo',
-        site_mission => 'Short URLs made simple.',
-
-        # Allow non-logged-in users to shorten URLs
-        allow_anonymous_shorten => 1, 
-
-        # Enable visitor tracking
-        track_visits => 1,
+    
+        # I18N
+        i18n => {
+            default => "en",
+            support_session => "lang",
+        },
+    
+        # eMail config
+        mail => {
+            from => 'tinymojo@localhost',
+            type => 'text/html',
+        }
+    
+        # hypnotoad configuration
+        hypnotoad => {
+            proxy => 1,
+            listen => [
+                "http://*:8080",
+                "https://*:8081",
+            ],
+        },
     };
 
 # SHORTENING METHOD
@@ -76,7 +90,8 @@ The lookup of shortened URLs is prety straight forward given the above method.
 
 # DATABASE
 
-The database only requires two tables: _url_ and _user_
+The database only requires two tables: _url_ and _user_, and optionally _redirect_ if
+you plan to track short url visits.
 
 ### URL table
 
