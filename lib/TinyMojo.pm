@@ -21,7 +21,7 @@ sub startup {
         my ($self, $resultset) = @_;
         my $dbh = TinyMojo::DB->connect( sub { return $connector->dbh } );
 
-        if( $self->config->{debugging} ) {
+        if( $self->mode eq 'development' ) {
             $dbh->storage->debug(1);
             $dbh->storage->debugcb( sub { push @{ $self->stash->{devpanels}{SQL} //= [] }, $_[1]; } );
         }
@@ -36,7 +36,7 @@ sub startup {
     $self->plugin('BootstrapHelpers', layout => 1);
 
     # Debugging stuff
-    $self->plugin('DevPanels') if $self->config->{debugging};
+    $self->plugin('DevPanels') if $self->mode eq 'development';
 
     # Session secret token
     $self->secrets( delete $self->config->{secrets} );
