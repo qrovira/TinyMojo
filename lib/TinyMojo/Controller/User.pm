@@ -122,17 +122,19 @@ sub signup {
     $validation->required('password_again')->equal_to('password')
         if $validation->required('password')->password->is_valid;
 
-    unless( $validation->has_error ) {
-        my %data = %{ $validation->output };
-        delete $data{password_again};
-        if( my $user = $self->db('User')->create( \%data ) ) {
-            my $sdata = { $user->get_inflated_columns };
-            delete $sdata->{password};
-            $self->session( user => $sdata );
-            $self->bs_flash_to( success => $self->l('User created!'), 'user#dashboard' );
-        } else {
-            $self->render->exception;
-        }
+    return $self->render if $validation->has_error;
+
+    my %data = %{ $validation->output };
+    delete $data{password_again};
+
+    if( my $user = $self->db('User')->create( \%data ) ) {
+        my $sdata = { $user->get_inflated_columns };
+        delete $sdata->{password};
+        $self->session( user => $sdata );
+        $self->bs_flash_to( success => $self->l('User created! Please check your inbox for activation instructions.'), 'user#dashboard' );
+    }
+    else {
+        $self->render->exception;
     }
 }
 

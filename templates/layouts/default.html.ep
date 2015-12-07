@@ -1,4 +1,4 @@
-% my $site_title = l('TinyMojo') . ' - ' . ( $title || l('Short URLs made simple.') );
+% my $site_title = l('TinyMojo') . ' - ' . ( stash->{title} || l('Short URLs made simple.') );
 <!DOCTYPE html>
 <html lang="en">
   <head>
