@@ -14,7 +14,8 @@ RUN cpanm \
     Data::UUID::MT \
     DBD::mysql \
     IO::Socket::SSL \
-    Email::Valid
+    Email::Valid \
+    Mojolicious::Plugin::I18N
 
 RUN cpanm \
     https://github.com/qrovira/BootstrapHelpers.git \
