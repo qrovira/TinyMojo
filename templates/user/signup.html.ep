@@ -7,6 +7,7 @@
 %=   bs_form_group [email => 'email', placeholder => l('my.email@example.com')] => ( label => l('eMail address') )
 %=   bs_form_group [password => 'password'] => ( label => l('Password') )
 %=   bs_form_group [password_again => 'password'] => ( label => l('[_1] (again)', l('Password')) )
+%=   bs_recaptcha
 %=   bs_submit l('Sign up')
 %=  end
 

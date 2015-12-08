@@ -122,7 +122,7 @@ sub signup {
     $validation->required('password_again')->equal_to('password')
         if $validation->required('password')->password->is_valid;
 
-    return $self->render if $validation->has_error;
+    return $self->render if $validation->has_error || !$self->valid_recaptcha;
 
     my %data = %{ $validation->output };
     delete $data{password_again};

@@ -38,6 +38,10 @@ sub startup {
     # Debugging stuff
     $self->plugin('DevPanels') if $self->mode eq 'development';
 
+    # ReCAPTCHA (optional)
+    $self->plugin('ReCAPTCHAv2' => $self->config->{recaptcha})
+        if $self->config->{recaptcha};
+
     # Session secret token
     $self->secrets( delete $self->config->{secrets} );
 
@@ -69,6 +73,24 @@ sub startup {
         my $next = $mt->iterator;
         $self->helper( generate_uuid => sub { return uc join "-", unpack("H8H4H4H4H12", $next->());  } );
     }
+
+    # Optional recaptcha support
+    $self->helper( bs_recaptcha => sub {
+        my $c = shift;
+        return '' if $c->session->{captchaok_until} >= time;
+        return '' unless $c->config->{recaptcha};
+        return $c->tag('div' => ( class => 'form-group'.($c->stash->{recaptcha_error} ? ' has-error' : '') ) => sub {
+            $c->label_for( 'g-recaptcha-response' => ( class => "control-label" ) => sub { $c->l('Spam check'); } ).
+            $c->recaptcha_get_html;
+        });
+    });
+    $self->helper( valid_recaptcha => sub {
+        my $c = shift;
+        my $ok = $c->config->{recaptcha} ? $c->recaptcha_verify : 1;
+        $self->stash->{recaptcha_error} = !$ok;
+        $c->session->{captchaok_until} = time + 3600 if $ok;
+        return $ok;
+    });
 
     # Custom validations
     my $validator = $self->validator;

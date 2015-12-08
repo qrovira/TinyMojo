@@ -2,3 +2,4 @@
 log
 script/hypnotoad.pid
 docker-compose.override.yml
+tiny_mojo.*.conf
