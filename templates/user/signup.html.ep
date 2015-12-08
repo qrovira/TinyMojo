@@ -1,7 +1,5 @@
-% extends 'user/base', title => l('Sign up');
-% content main => begin
-
-  <h3><%= l('Sign up') %></h3>
+% layout 'default';
+<h2><%= l('Sign up') %></h2>
 %=  form_for 'user#signup' => ( method => 'POST', role => "form" ) => begin
 %=   bs_form_group [login => 'text', placeholder => l('Type username...')] => ( label => l('User name') )
 %=   bs_form_group [email => 'email', placeholder => l('my.email@example.com')] => ( label => l('eMail address') )
@@ -10,5 +8,3 @@
 %=   bs_recaptcha
 %=   bs_submit l('Sign up')
 %=  end
-
-%= end

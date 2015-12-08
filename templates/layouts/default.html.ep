@@ -19,7 +19,7 @@
         <%= bs_nav "nav nav-pills navbar-right" => begin %>
           <%= bs_nav_item l('Shorten') => 'main#shorten' %>
 % if( logged_in ) {
-          <%= bs_nav_item l('User') => 'user#dashboard' %>
+          <%= bs_nav_item session->{user}{login} => 'user#dashboard' %>
 % } else {
           <%= bs_nav_item l('Log in') => 'user#login' %>
           <%= bs_nav_item l('Sign up') => 'user#signup' %>

@@ -1,5 +1,4 @@
 % layout 'default';
-% title $config->{site_mission};
 <h2><%= l('Log in') %></h2>
 % if( my $message = stash 'error' ) {
   <div class="alert alert-danger">
