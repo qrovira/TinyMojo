@@ -1,6 +1,9 @@
 package TinyMojo::Controller::User;
 use Mojo::Base 'Mojolicious::Controller';
 
+use Mojo::JSON qw/ encode_json decode_json /;
+use Mojo::Util qw/ b64_encode b64_decode /;
+
 use Crypt::Passwd::XS 'unix_sha512_crypt';
 
 #
@@ -131,6 +134,9 @@ sub signup {
         my $sdata = { $user->get_inflated_columns };
         delete $sdata->{password};
         $self->session( user => $sdata );
+        my $activation = b64_encode( encode_json( { email => $user->email } ), '' );
+        my $checksum = Mojo::Util::hmac_sha1_sum( $activation, $self->app->secrets->[0] );
+        $self->stash( activation_token => $checksum."--".$activation );
         $self->mail(
             to       => $user->email,
             subject  => $self->l("Welcome to TinyMojo!"),
@@ -142,6 +148,24 @@ sub signup {
     else {
         $self->render->exception;
     }
+}
+
+sub activate {
+    my $self = shift;
+    my $code = $self->param('code');
+
+    if( $code =~ m#^(?<checksum>.+)--(?<data>.+)$# ) {
+        my $checksum = Mojo::Util::hmac_sha1_sum( $+{data}, $self->app->secrets->[0] );
+        if( $+{checksum} eq $checksum ) {
+            my $data = eval { decode_json( b64_decode( $+{data} ) ); };
+            if( $data && $data->{email} eq $self->session->{user}{email} ) {
+                $self->db('User')->find( $self->session->{user}{id} )->update({ email_verified => 1 });
+                $self->bs_flash_to( success => $self->l('eMail address verified! Thanks!'), 'user#profile' );
+            }
+        }
+    }
+
+    $self->bs_flash_to( danger => $self->l('Wrong activation code'), 'user#profile' );
 }
 
 sub profile {

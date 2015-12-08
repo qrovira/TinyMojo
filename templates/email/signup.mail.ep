@@ -1,0 +1,8 @@
+% layout 'email';
+% my $user = session->{user};
+
+<h2><%= l('Welcome to TinyMojo, [_1]!', $user->{login}) %></h2>
+
+% my $activate_url = url_for('user#activate')->query(code => $activation_token)->to_abs;
+<p><%== l('As part of the sign up process, please click [_1] to activate your email address.', link_to( l('here') => $activate_url)) %></p>
+<p><%= l('This is required in order to secure your account, and in case you need to recover your password.') %></p>

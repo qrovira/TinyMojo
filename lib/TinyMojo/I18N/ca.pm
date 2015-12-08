@@ -31,6 +31,13 @@ our %Lexicon = (
     "Save" => "Desar",
     "List all URLs" => "Totes les URLs",
     "List of last [_1] short URLs generated" => "Llistat de les darreres [_1] URLs generades",
+
+    'Welcome to TinyMojo, [_1]!' => 'Benvingut a TinyMojo, [_1]!',
+    'As part of the sign up process, please click [_1] to activate your email address.' =>
+    'Com a part del procés de registre, si us plau fes click [_1] per activat la teva adreça de correu-e',
+    'here' => 'aquí',
+    'This is required in order to secure your account, and in case you need to recover your password.' =>
+    'Això és necessari per a assegurar el teu compte, i en cas que necessitis recuperar la contrasenya.',
 );
 
 

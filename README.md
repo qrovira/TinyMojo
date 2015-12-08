@@ -107,6 +107,7 @@ you plan to track short url visits.
       id int auto_increment primary key,
       login varchar(255) not null,
       email varchar(100) not null,
+      email_verified tinyint(1) default 0,
       password varchar(512),
       admin bool not null default 0,
     );

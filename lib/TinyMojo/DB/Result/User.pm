@@ -29,6 +29,11 @@ __PACKAGE__->add_columns(
         is_nullable => 0,
         size => 100,
     },
+    'email_verified',
+    {
+        data_type => 'tinyiny',
+        is_nullable => 0,
+    },
     'password',
     {
         data_type => 'varchar',
