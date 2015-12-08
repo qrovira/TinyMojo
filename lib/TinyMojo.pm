@@ -21,7 +21,7 @@ sub startup {
         my ($self, $resultset) = @_;
         my $dbh = TinyMojo::DB->connect( sub { return $connector->dbh } );
 
-        if( $self->mode eq 'development' ) {
+        if( $self->app->mode eq 'development' ) {
             $dbh->storage->debug(1);
             $dbh->storage->debugcb( sub { push @{ $self->stash->{devpanels}{SQL} //= [] }, $_[1]; } );
         }

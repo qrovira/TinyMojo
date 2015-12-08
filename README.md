@@ -59,12 +59,6 @@ There you can set the encryption key (10 bytes, 20 hex chars), along with the da
             support_session => "lang",
         },
     
-        # eMail config
-        mail => {
-            from => 'tinymojo@localhost',
-            type => 'text/html',
-        }
-    
         # hypnotoad configuration
         hypnotoad => {
             proxy => 1,
