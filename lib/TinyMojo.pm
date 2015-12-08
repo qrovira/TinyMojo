@@ -86,7 +86,10 @@ sub startup {
     });
     $self->helper( valid_recaptcha => sub {
         my $c = shift;
-        my $ok = $c->config->{recaptcha} ? $c->recaptcha_verify : 1;
+        my $ok = !$c->config->{recaptcha} || (
+                $c->session->{captchaok_until} &&
+                $c->session->{captchaok_until} >= time
+            ) || $c->recaptcha_verify;
         $self->stash->{recaptcha_error} = !$ok;
         $c->session->{captchaok_until} = time + 3600 if $ok;
         return $ok;

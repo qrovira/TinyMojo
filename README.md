@@ -62,8 +62,8 @@ There you can set the encryption key (10 bytes, 20 hex chars), along with the da
         # eMail config
         mail => {
             from => 'tinymojo@localhost',
-            type => 'text/html',
-        }
+            # bcc, reply_to, etc.
+        },
     
         # hypnotoad configuration
         hypnotoad => {
