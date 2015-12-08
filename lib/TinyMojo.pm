@@ -35,6 +35,9 @@ sub startup {
     # Bootstrap helpers
     $self->plugin('BootstrapHelpers', layout => 1);
 
+    # Mail capabilities
+    $self->plugin('Mail' => $self->config->{mail});
+
     # Debugging stuff
     $self->plugin('DevPanels') if $self->mode eq 'development';
 
@@ -272,6 +275,12 @@ There you can set the encryption key (10 bytes, 20 hex chars), along with the da
       i18n => {
           default => "en",
           support_session => "lang",
+      },
+  
+      # eMail config
+      mail => {
+          from => 'tinymojo@localhost',
+          # bcc, reply_to, etc.
       },
   
       # hypnotoad configuration

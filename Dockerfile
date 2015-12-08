@@ -15,7 +15,8 @@ RUN cpanm \
     DBD::mysql \
     IO::Socket::SSL \
     Email::Valid \
-    Mojolicious::Plugin::I18N
+    Mojolicious::Plugin::I18N \
+    Mojolicious::Plugin::Mail
 
 RUN cpanm \
     https://github.com/qrovira/BootstrapHelpers.git \

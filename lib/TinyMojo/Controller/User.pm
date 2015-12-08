@@ -131,6 +131,12 @@ sub signup {
         my $sdata = { $user->get_inflated_columns };
         delete $sdata->{password};
         $self->session( user => $sdata );
+        $self->mail(
+            to       => $user->email,
+            subject  => $self->l("Welcome to TinyMojo!"),
+            template => 'email/signup',
+            type     => 'text/html',
+        );
         $self->bs_flash_to( success => $self->l('User created! Please check your inbox for activation instructions.'), 'user#dashboard' );
     }
     else {
