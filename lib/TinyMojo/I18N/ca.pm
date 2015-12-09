@@ -38,6 +38,10 @@ our %Lexicon = (
     'here' => 'aquí',
     'This is required in order to secure your account, and in case you need to recover your password.' =>
     'Això és necessari per a assegurar el teu compte, i en cas que necessitis recuperar la contrasenya.',
+    'Your email address has not been validated yet. Click [_1] to resend the confirmation email.' =>
+    'La teva adreça de correu-e encara no ha sigut validada. Fes clic [_1] per reenviar el correu de confirmació.',
+    'Activation email sent to [_1]. Please check your inbox within a few minutes.' => 
+    'El correu d\'activatió ha sigut reenviat. Si us plau, comprova el teu correu en uns minuts.',
 );
 
 

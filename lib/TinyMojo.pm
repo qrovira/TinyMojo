@@ -132,6 +132,7 @@ sub startup {
     $auth_r->get('/user/dashboard')->to_named('user#dashboard');
     $auth_r->route('/user/profile')->to_named('user#profile');
     $auth_r->route('/user/activate')->to_named('user#activate');
+    $auth_r->route('/user/resend_email_validation')->to_named('user#resend_email_validation');
     $admin_r->get('/user/admin/list_urls')->to_named('user#list_urls');
 
     # Handle short url

@@ -3,9 +3,15 @@
 
   <h3><%= l('Profile') %></h3>
 %=  form_for profile => ( method => 'POST', role => "form" ) => begin
-%=   hidden_field id => $user->{id}
+%=   hidden_field id => $user->id
 %=   bs_form_group [login => 'text', placeholder => l('Type username...')] => ( label => l('User name') )
-%=   bs_form_group [email => 'email', placeholder => l('my.email@example.com')] => ( label => l('eMail address') )
+<%=  bs_form_group [email => 'email', placeholder => l('my.email@example.com')] => (
+        label => l('eMail address'),
+        ( $user->email_verified ? () :
+            ( help => l('Your email address has not been validated yet. Click [_1] to resend the confirmation email.',
+                link_to( l('here') => 'user#resend_email_validation' ) ) )
+        )
+     ) %>
 %=   bs_form_group [password => 'password'] => ( label => l('Password') )
 %=   bs_form_group [password_again => 'password'] => ( label => l('[_1] (again)', l('Password')) )
 %=   bs_submit l('Save')

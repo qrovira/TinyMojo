@@ -134,15 +134,7 @@ sub signup {
         my $sdata = { $user->get_inflated_columns };
         delete $sdata->{password};
         $self->session( user => $sdata );
-        my $activation = b64_encode( encode_json( { email => $user->email } ), '' );
-        my $checksum = Mojo::Util::hmac_sha1_sum( $activation, $self->app->secrets->[0] );
-        $self->stash( activation_token => $checksum."--".$activation );
-        $self->mail(
-            to       => $user->email,
-            subject  => $self->l("Welcome to TinyMojo!"),
-            template => 'email/signup',
-            type     => 'text/html',
-        );
+        $self->_send_email_validation;
         $self->bs_flash_to( success => $self->l('User created! Please check your inbox for activation instructions.'), 'user#dashboard' );
     }
     else {
@@ -160,7 +152,7 @@ sub activate {
             my $data = eval { decode_json( b64_decode( $+{data} ) ); };
             if( $data && $data->{email} eq $self->session->{user}{email} ) {
                 $self->db('User')->find( $self->session->{user}{id} )->update({ email_verified => 1 });
-                $self->bs_flash_to( success => $self->l('eMail address verified! Thanks!'), 'user#profile' );
+                return $self->bs_flash_to( success => $self->l('eMail address verified! Thanks!'), 'user#profile' );
             }
         }
     }
@@ -190,8 +182,18 @@ sub profile {
         unless( $validation->has_error ) {
             my %values = %{ $validation->output };
             delete $values{password_again};
+
+            my $email_changed = $values{email} ne $user->email;
+            $values{email_verified} = 0
+                if $email_changed;
+
             if( $user->update( \%values ) ) {
-                $self->bs_notify( success => $self->l('Profile updated!') );
+                $self->_send_email_validation( $user )
+                    if( $email_changed );
+                my $sdata = { $user->get_inflated_columns };
+                delete $sdata->{password};
+                $self->session( user => $sdata );
+                $self->bs_flash_to( success => $self->l('Profile updated!'), 'user#profile' );
             } else {
                 $self->bs_notify( danger => $self->l('Error updating profile') );
             }
@@ -207,6 +209,26 @@ sub profile {
         unless $self->param("email");
 }
 
+sub resend_email_validation {
+    my $self = shift;
+    my $user = $self->db('User')->find( $self->session->{user}{id} );
 
+    $self->_send_email_validation( $user );
+    $self->bs_flash_to( success => $self->l('Activation email sent to [_1]. Please check your inbox within a few minutes.'), 'user#profile' );
+}
+
+
+sub _send_email_validation {
+    my ($self, $user) = @_;
+    my $activation = b64_encode( encode_json( { email => $user->email } ), '' );
+    my $checksum = Mojo::Util::hmac_sha1_sum( $activation, $self->app->secrets->[0] );
+    $self->stash( activation_token => $checksum."--".$activation );
+    $self->mail(
+        to       => $user->email,
+        subject  => $self->l("Welcome to TinyMojo!"),
+        template => 'email/signup',
+        type     => 'text/html',
+    );
+}
 
 1;
