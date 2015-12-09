@@ -214,7 +214,13 @@ sub resend_email_validation {
     my $user = $self->db('User')->find( $self->session->{user}{id} );
 
     $self->_send_email_validation( $user );
-    $self->bs_flash_to( success => $self->l('Activation email sent to [_1]. Please check your inbox within a few minutes.'), 'user#profile' );
+    $self->bs_flash_to(
+        success => $self->l(
+            'Activation email sent to [_1]. Please check your inbox within a few minutes.',
+            $user->email
+        ),
+        'user#profile'
+    );
 }
 
 
