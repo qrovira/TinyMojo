@@ -21,20 +21,6 @@ sub check_auth {
     return undef;
 }
 
-sub check_admin {
-    my $c = shift;
-
-    return 1 if $c->admin;
-    
-    $c->bs_flash_to(
-        danger => $c->l('Not authorized'),
-        ($c->logged_in ? 'url#shorten' : 'user#login')
-    );
-
-    return undef;
-}
-
-
 #
 # Actual actions
 #

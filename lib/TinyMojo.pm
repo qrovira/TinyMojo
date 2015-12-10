@@ -118,7 +118,7 @@ sub startup {
     $r->add_shortcut( to_named => sub { return shift->to(@_)->name($_[0]); });
 
     my $auth_r = $r->under->to( 'user#check_auth' );
-    my $admin_r = $r->under->to( 'user#check_admin' );
+    my $admin_r = $r->under->to( 'admin#check_admin' );
     my $shorten_r = $self->config->{allow_anonymous_shorten} ? $r : $auth_r;
 
     # User controller
