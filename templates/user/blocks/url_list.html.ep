@@ -1,7 +1,6 @@
   <table class="table table-condensed table-striped">
     <thead>
       <tr>
-        <th><%= l('ID') %></th>
         <th><%= l('Short URL') %></th>
         <th><%= l('Long URL') %></th>
         <th><%= l('Hits') %></th>
@@ -13,7 +12,6 @@
   % foreach my $url ( @{ $urls // [] } ) {
   %   my $short = short_url $url->id;
     <tr>
-      <td><%= $url->id %></td>
       <td><%= link_to $short => $short %></td>
       <td><%= $url->longurl %></td>
       <td><%= $hits->{$url->id} // 0 %></td>
