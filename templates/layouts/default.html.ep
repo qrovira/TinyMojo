@@ -42,7 +42,9 @@
             <%= end %>
 % } else {
             <%= bs_nav_item l('Log in') => 'user#login' %>
+%   if( config->{allow_signup} ) {
             <%= bs_nav_item l('Sign up') => 'user#signup' %>
+%   }
 % }
           <% end %>
         </div>

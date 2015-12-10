@@ -127,7 +127,8 @@ sub startup {
 
     # User
     $r->route('/user/login')->to_named('user#login');
-    $r->route('/user/signup')->to_named('user#signup');
+    $r->route('/user/signup')->to_named('user#signup')
+        if $self->config->{allow_signup};
     $auth_r->get('/user/logout')->to_named('user#logout');
     $auth_r->get('/user/dashboard')->to_named('user#dashboard');
     $auth_r->route('/user/profile')->to_named('user#profile');
