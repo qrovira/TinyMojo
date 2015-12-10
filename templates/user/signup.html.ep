@@ -1,4 +1,6 @@
 % layout 'default';
+% title l('Sign up');
+
 <h2><%= l('Sign up') %></h2>
 %=  form_for 'user#signup' => ( method => 'POST', role => "form" ) => begin
 %=   bs_form_group [login => 'text', placeholder => l('Type username...')] => ( label => l('User name') )
