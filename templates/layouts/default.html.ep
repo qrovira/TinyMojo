@@ -18,7 +18,7 @@
     <div class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#main-navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -26,11 +26,20 @@
           </button>
           <a class="navbar-brand"><%= $site_title %></a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="main-navbar">
           <%= bs_nav "nav navbar-nav navbar-right" => begin %>
             <%= bs_nav_item l('Shorten') => 'main#shorten' %>
 % if( logged_in ) {
-            <%= bs_nav_item session->{user}{login} => 'user#dashboard' %>
+            <%= bs_nav_item session->{user}{login} => begin %>
+            <%= bs_nav_item l('Dashboard') => 'user#dashboard' %>
+            <%= bs_nav_item l('Profile') => 'user#profile' %>
+%   if( admin ) {
+            <%= bs_nav_item '-' %>
+            <%= bs_nav_item l('List all URLs') => 'user#list_urls' %>
+            <%= bs_nav_item '-' %>
+%   }
+            <%= bs_nav_item l('Log out') => 'user#logout' %>
+            <%= end %>
 % } else {
             <%= bs_nav_item l('Log in') => 'user#login' %>
             <%= bs_nav_item l('Sign up') => 'user#signup' %>
