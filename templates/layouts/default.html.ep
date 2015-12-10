@@ -35,7 +35,7 @@
             <%= bs_nav_item l('Profile') => 'user#profile' %>
 %   if( admin ) {
             <%= bs_nav_item '-' %>
-            <%= bs_nav_item l('List all URLs') => 'user#list_urls' %>
+            <%= bs_nav_item l('List all URLs') => 'admin#list_urls' %>
             <%= bs_nav_item '-' %>
 %   }
             <%= bs_nav_item l('Log out') => 'user#logout' %>

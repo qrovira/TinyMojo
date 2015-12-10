@@ -80,7 +80,7 @@ sub startup {
     # Optional recaptcha support
     $self->helper( bs_recaptcha => sub {
         my $c = shift;
-        return '' if $c->session->{captchaok_until} >= time;
+        return '' if $c->session->{captchaok_until} && $c->session->{captchaok_until} >= time;
         return '' unless $c->config->{recaptcha};
         return $c->tag('div' => ( class => 'form-group'.($c->stash->{recaptcha_error} ? ' has-error' : '') ) => sub {
             $c->label_for( 'g-recaptcha-response' => ( class => "control-label" ) => sub { $c->l('Spam check'); } ).
@@ -134,7 +134,8 @@ sub startup {
     $auth_r->route('/user/profile')->to_named('user#profile');
     $auth_r->route('/user/activate')->to_named('user#activate');
     $auth_r->route('/user/resend_email_validation')->to_named('user#resend_email_validation');
-    $admin_r->get('/user/admin/list_urls')->to_named('user#list_urls');
+
+    $admin_r->get('/admin/list_urls')->to_named('admin#list_urls');
 
     # Handle short url
     $r->get('/:shorturl')->to_named('main#redirect');
