@@ -1,6 +1,6 @@
 % layout 'default';
 <h2><%= l('Shorten') %></h2>
-%= form_for 'main#shorten' => ( method => 'POST', role => "form" ) => begin
+%= form_for 'url#shorten' => ( method => 'POST', role => "form" ) => begin
 %=  bs_form_group [longurl => 'url', placeholder => l('Enter URL to shorten...'), required => "required"] => ( label => l('URL') )
 %=  bs_submit l('Shorten')
 %= end

@@ -28,7 +28,7 @@
         </div>
         <div class="collapse navbar-collapse" id="main-navbar">
           <%= bs_nav "nav navbar-nav navbar-right" => begin %>
-            <%= bs_nav_item l('Shorten') => 'main#shorten' %>
+            <%= bs_nav_item l('Shorten') => 'url#shorten' %>
 % if( logged_in ) {
             <%= bs_nav_item session->{user}{login} => begin %>
             <%= bs_nav_item l('Dashboard') => 'user#dashboard' %>

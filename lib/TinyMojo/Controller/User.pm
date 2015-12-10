@@ -28,7 +28,7 @@ sub check_admin {
     
     $c->bs_flash_to(
         danger => $c->l('Not authorized'),
-        ($c->logged_in ? 'main#shorten' : 'user#login')
+        ($c->logged_in ? 'url#shorten' : 'user#login')
     );
 
     return undef;

@@ -1,4 +1,4 @@
-package TinyMojo::Controller::Main;
+package TinyMojo::Controller::Url;
 use Mojo::Base 'Mojolicious::Controller';
 
 sub redirect {
@@ -56,7 +56,7 @@ sub shorten {
         $self->respond_to( 
             json => { json => { status => "ok", shorturl => $shorturl } },
             html => sub {
-                $self->bs_flash_to( success => $self->l('URL shortened!'), 'main#shortened', shorturl => $token);
+                $self->bs_flash_to( success => $self->l('URL shortened!'), 'url#show', shorturl => $token);
             },
         );
     }
@@ -65,7 +65,7 @@ sub shorten {
     }
 }
 
-sub shortened {
+sub show {
     my $self = shift;
     my $shorturl = $self->param('shorturl');
     my $id = $self->token_to_id( $shorturl );

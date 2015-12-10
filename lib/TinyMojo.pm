@@ -121,11 +121,7 @@ sub startup {
     my $admin_r = $r->under->to( 'user#check_admin' );
     my $shorten_r = $self->config->{allow_anonymous_shorten} ? $r : $auth_r;
 
-    # Actions
-    $shorten_r->any([qw/get post/] => '/')->to_named('main#shorten');
-    $shorten_r->get('/shortened/:shorturl')->to_named('main#shortened');
-
-    # User
+    # User controller
     $r->route('/user/login')->to_named('user#login');
     $r->route('/user/signup')->to_named('user#signup')
         if $self->config->{allow_signup};
@@ -135,10 +131,13 @@ sub startup {
     $auth_r->route('/user/activate')->to_named('user#activate');
     $auth_r->route('/user/resend_email_validation')->to_named('user#resend_email_validation');
 
+    # Admin controller
     $admin_r->get('/admin/list_urls')->to_named('admin#list_urls');
 
-    # Handle short url
-    $r->get('/:shorturl')->to_named('main#redirect');
+    # URL controller
+    $shorten_r->get('/url/show/:shorturl')->to_named('url#show');
+    $shorten_r->any([qw/get post/] => '/')->to_named('url#shorten');
+    $r->get('/:shorturl')->to_named('url#redirect');
 }
 
 
