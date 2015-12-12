@@ -1,5 +1,7 @@
 % layout 'default';
+% title l('URL stats');
+
 <p>
-  <%= l('Your new short url is:') %><br>
+  <%= $edit eq 'created' ? l('Your new short URL is:') : l('Short URL:') %><br>
   <%= link_to "".$shorturl => $shorturl %>
 </p>

@@ -56,7 +56,10 @@ sub shorten {
         $self->respond_to( 
             json => { json => { status => "ok", shorturl => $shorturl } },
             html => sub {
-                $self->bs_flash_to( success => $self->l('URL shortened!'), 'url#show', token => $token);
+                $self->bs_flash_to(
+                    success => $self->l('URL shortened!'),
+                    $self->url_for('url#show', token => $token)->query( edit => "create" )
+                );
             },
         );
     }
@@ -68,13 +71,18 @@ sub shorten {
 sub show {
     my $self = shift;
     my $token = $self->param('token');
+    my $edit = $self->param('edit') // "";
     my $id = $self->token_to_id( $token );
     my $url = $self->db('Url')->find($id);
 
     return $self->reply->not_found
         unless $url;
 
-    $self->stash( url => $url, shorturl => $self->url_for($token)->to_abs );
+    $self->stash(
+        url => $url,
+        edit => $edit,
+        shorturl => $self->url_for($token)->to_abs
+    );
 }
 
 

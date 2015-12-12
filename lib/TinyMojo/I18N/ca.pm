@@ -8,7 +8,8 @@ our %Lexicon = (
     "Shorten" => "Escurça",
     "Link to shorten" => "Adreça a escurçar",
     "Enter URL to shorten..." => "Escriu la adreça URL a escurçar...",
-    "Your new short url is:" => "La teva adreça curta és:",
+    "Your new short URL is:" => "La teva nova URL breu és:",
+    "Short URL:" => "URL breu:",
 
     "User name" => "Nom d'usuari",
     "eMail address" => "Adreça de correu-e",
