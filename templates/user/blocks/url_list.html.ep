@@ -7,6 +7,7 @@
 % if( $show_user ) {
         <th><%= l('User') %></th>
 % }
+        <th></th>
       </tr>
     </thead>
   % foreach my $url ( @{ $urls // [] } ) {
@@ -18,6 +19,11 @@
 % if( $show_user ) {
       <td><%= ($url->user ? $url->user->login : "") %></td>
 % }
+      <td>
+        <%= link_to 'url#show' => { token => id_to_token($url->id) } => begin %>
+        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+        <% end %>
+      </td>
     </tr>
   % }
   </table>

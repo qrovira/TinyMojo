@@ -135,9 +135,9 @@ sub startup {
     $admin_r->get('/admin/list_urls')->to_named('admin#list_urls');
 
     # URL controller
-    $shorten_r->get('/url/show/:shorturl')->to_named('url#show');
+    $shorten_r->get('/url/show/:token')->to_named('url#show');
     $shorten_r->any([qw/get post/] => '/')->to_named('url#shorten');
-    $r->get('/:shorturl')->to_named('url#redirect');
+    $r->get('/:token')->to_named('url#redirect');
 }
 
 

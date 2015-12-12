@@ -1,7 +1,6 @@
 % layout 'default';
 % title l('Profile');
 
-<h2><%= l('Profile') %></h2>
 %=  form_for profile => ( method => 'POST', role => "form" ) => begin
 %=   hidden_field id => $user->id
 %=   bs_form_group [login => 'text', placeholder => l('Type username...')] => ( label => l('User name') )

@@ -1,7 +1,6 @@
 % layout 'default';
 % title l('Log in');
 
-<h2><%= l('Log in') %></h2>
 % if( my $message = stash 'error' ) {
   <div class="alert alert-danger">
     %= $message

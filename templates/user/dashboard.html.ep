@@ -1,6 +1,5 @@
 % layout 'default';
 % title l('Dashboard');
 
-<h2><%= l('Dashboard') %></h2>
 <h3><%= l('Your [_1] last shortened URLs', $rows) %></h3>
 %= include 'user/blocks/url_list', urls => $urls, hits => $hits, page => $page, pager => $pager, show_user => 0

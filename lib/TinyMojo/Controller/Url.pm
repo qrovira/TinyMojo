@@ -3,8 +3,8 @@ use Mojo::Base 'Mojolicious::Controller';
 
 sub redirect {
     my $self = shift;
-    my $shorturl = $self->param('shorturl');
-    my $id = $self->token_to_id( $shorturl );
+    my $token = $self->param('token');
+    my $id = $self->token_to_id( $token );
     my $url = $self->db('Url')->find($id);
 
     return $self->reply->not_found
@@ -56,7 +56,7 @@ sub shorten {
         $self->respond_to( 
             json => { json => { status => "ok", shorturl => $shorturl } },
             html => sub {
-                $self->bs_flash_to( success => $self->l('URL shortened!'), 'url#show', shorturl => $token);
+                $self->bs_flash_to( success => $self->l('URL shortened!'), 'url#show', token => $token);
             },
         );
     }
@@ -67,14 +67,14 @@ sub shorten {
 
 sub show {
     my $self = shift;
-    my $shorturl = $self->param('shorturl');
-    my $id = $self->token_to_id( $shorturl );
+    my $token = $self->param('token');
+    my $id = $self->token_to_id( $token );
     my $url = $self->db('Url')->find($id);
 
     return $self->reply->not_found
         unless $url;
 
-    $self->stash( url => $url, shorturl => $self->url_for($shorturl)->to_abs );
+    $self->stash( url => $url, shorturl => $self->url_for($token)->to_abs );
 }
 
 

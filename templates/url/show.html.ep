@@ -1,5 +1,4 @@
 % layout 'default';
-<h2><%= l('Shorten') %></h2>
 <p>
   <%= l('Your new short url is:') %><br>
   <%= link_to "".$shorturl => $shorturl %>
