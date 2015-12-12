@@ -22,3 +22,4 @@
   % }
   </table>
 
+%= bs_pager $pager, ( pager_items => 11, class => "text-center" )

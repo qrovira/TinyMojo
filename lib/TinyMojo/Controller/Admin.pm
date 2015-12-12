@@ -25,14 +25,14 @@ sub check_admin {
 
 sub list_urls {
     my ($self) = @_;
-    my $offset = $self->param('offset') // 0;
+    my $page = $self->param('page') // 1;
     my $rows = $self->param('rows') // 10;
     $rows = 100 if $rows > 100;
 
     my $urls = $self->db('Url')->search({},{
         order_by => { -desc => 'me.id' },
-        offset => $offset,
         rows => $rows,
+        page => $page,
         cache => 1,
         prefetch => [ "user" ],
     });
@@ -43,6 +43,8 @@ sub list_urls {
         urls => [ $urls->all ],
         hits => \%hits,
         rows => $rows,
+        page => $page,
+        pager => $urls->pager,
     );
 }
 

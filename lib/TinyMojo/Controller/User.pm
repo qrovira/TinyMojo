@@ -27,7 +27,7 @@ sub check_auth {
 
 sub dashboard {
     my ($self) = @_;
-    my $offset = $self->param('offset') // 0;
+    my $page = $self->param('page') // 1;
     my $rows = $self->param('rows') // 10;
     $rows = 100 if $rows > 100;
 
@@ -35,8 +35,8 @@ sub dashboard {
         user_id => $self->session->{user}{id}
     },{
         order_by => { -desc => 'id' },
-        offset => $offset,
         rows => $rows,
+        page => $page,
         cache => 1,
     });
 
@@ -46,6 +46,8 @@ sub dashboard {
         urls => [ $urls->all ],
         hits => \%hits,
         rows => $rows,
+        page => $page,
+        pager => $urls->pager,
     );
 }
 
