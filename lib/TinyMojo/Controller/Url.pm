@@ -19,7 +19,7 @@ sub redirect {
         }
 
         # Log redirect
-        $self->db('Redirect')->create({
+        $self->db('Hit')->create({
             url_id => $id,
             visitor_ip => $self->tx->remote_address,
             visitor_forwarded_for => scalar $self->req->headers->header('X-Forwarded-For'),

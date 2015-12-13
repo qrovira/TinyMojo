@@ -316,7 +316,7 @@ The lookup of shortened URLs is prety straight forward given the above method.
 
 =head1 DATABASE
 
-The database only requires two tables: I<url> and I<user>, and optionally I<redirect> if
+The database only requires two tables: I<url> and I<user>, and optionally I<hit> if
 you plan to track short url visits.
 
 =head3 URL table
@@ -340,7 +340,7 @@ you plan to track short url visits.
 
 =head3 Tracking table
 
-  CREATE TABLE `redirect` (
+  CREATE TABLE `hit` (
     id int auto_increment primary key,
     url_id int not null,
     time timestamp not null default current_timestamp,

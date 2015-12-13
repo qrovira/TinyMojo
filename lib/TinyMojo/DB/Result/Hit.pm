@@ -1,5 +1,5 @@
 use utf8;
-package TinyMojo::DB::Result::Redirect;
+package TinyMojo::DB::Result::Hit;
 
 use strict;
 use warnings;
@@ -7,7 +7,7 @@ use warnings;
 use base 'DBIx::Class::Core';
 
 __PACKAGE__->load_components('InflateColumn::DateTime');
-__PACKAGE__->table('redirect');
+__PACKAGE__->table('hit');
 
 __PACKAGE__->add_columns(
     'id',
@@ -15,7 +15,7 @@ __PACKAGE__->add_columns(
         data_type         => 'integer',
         is_auto_increment => 1,
         is_nullable       => 0,
-        sequence          => 'redirect_id_seq',
+        sequence          => 'hit_id_seq',
     },
     'url_id',
     {

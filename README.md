@@ -90,7 +90,7 @@ The lookup of shortened URLs is prety straight forward given the above method.
 
 # DATABASE
 
-The database only requires two tables: _url_ and _user_, and optionally _redirect_ if
+The database only requires two tables: _url_ and _user_, and optionally _hit_ if
 you plan to track short url visits.
 
 ### URL table
@@ -114,7 +114,7 @@ you plan to track short url visits.
 
 ### Tracking table
 
-    CREATE TABLE `redirect` (
+    CREATE TABLE `hit` (
       id int auto_increment primary key,
       url_id int not null,
       time timestamp not null default current_timestamp,

@@ -17,7 +17,7 @@ CREATE TABLE `user` (
 INSERT INTO user (login,password,admin) VALUES
 ("admin", CONCAT(SHA2(CONCAT("password","BADSALTBADSALT12"),512), "BADSALTBADSALT12"), 1);
 
-CREATE TABLE `redirect` (
+CREATE TABLE `hit` (
   id int auto_increment primary key,
   url_id int not null,
   time timestamp not null default current_timestamp,

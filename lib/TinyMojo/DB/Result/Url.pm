@@ -36,7 +36,7 @@ __PACKAGE__->set_primary_key('id');
 
 __PACKAGE__->might_have( user => 'TinyMojo::DB::Result::User', { 'foreign.id' => 'self.user_id' } );
 
-__PACKAGE__->has_many( redirect => 'TinyMojo::DB::Result::Redirect', 'url_id' );
+__PACKAGE__->has_many( hit => 'TinyMojo::DB::Result::Hit', 'url_id' );
 
 
 1;

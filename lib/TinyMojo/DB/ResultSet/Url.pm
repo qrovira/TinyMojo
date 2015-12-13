@@ -8,7 +8,7 @@ use base qw/DBIx::Class::ResultSet/;
 sub hits {
     my $rs = shift;
 
-    return $rs->result_source->schema->resultset('Redirect')->search({
+    return $rs->result_source->schema->resultset('Hit')->search({
         url_id => [ map { $_->id } $rs->all ],
     }, {
         select => [ 'url_id', { count => 'id' } ],
