@@ -5,18 +5,6 @@ use warnings;
 
 use base qw/DBIx::Class::ResultSet/;
 
-sub hits {
-    my $rs = shift;
-
-    return $rs->result_source->schema->resultset('Hit')->search({
-        url_id => [ map { $_->id } $rs->all ],
-    }, {
-        select => [ 'url_id', { count => 'id' } ],
-        as => [ qw/ url_id hits /],
-        group_by => [ qw/url_id/ ],
-    });
-}
-
 sub urls_with_hits {
     my ($self, $search, $search_attrs, $fetch_attrs) = @_;
 
