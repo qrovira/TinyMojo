@@ -29,17 +29,18 @@ sub list_urls {
     my $rows = $self->param('rows') // 10;
     $rows = 100 if $rows > 100;
 
-    my $urls = $self->db('Url')->urls_with_hits({},
+    my ($urls, $pager) = $self->db('Url')->urls_with_hits({},
         {
             rows     => $rows,
             page     => $page,
-            prefetch => [ "user" ]
-        }
+        },
+        { prefetch => [ "user" ] }
     );
 
     $self->stash(
-        urls => $urls,
-        rows => $rows,
+        urls  => $urls,
+        pager => $pager,
+        rows  => $rows,
     );
 }
 

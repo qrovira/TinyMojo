@@ -29,14 +29,15 @@ sub dashboard {
     my $page = $self->param('page') // 1;
     my $rows = $self->param('rows') // 10;
 
-    my $urls = $self->db('Url')->urls_with_hits(
+    my ($urls, $pager) = $self->db('Url')->urls_with_hits(
         { user_id => $self->session->{user}{id} },
         { rows => $rows, page => $page }
     );
 
     $self->stash(
-        urls => $urls,
-        rows => $rows,
+        urls  => $urls,
+        rows  => $rows,
+        pager => $pager,
     );
 }
 

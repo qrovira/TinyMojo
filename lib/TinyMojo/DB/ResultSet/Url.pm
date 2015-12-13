@@ -18,25 +18,36 @@ sub hits {
 }
 
 sub urls_with_hits {
-    my ($self, $search, $attrs) = @_;
+    my ($self, $search, $search_attrs, $fetch_attrs) = @_;
 
-    $attrs //= {};
-    $attrs->{rows} = 100 if $attrs->{rows} > 100;
+    $search_attrs //= {};
+    $fetch_attrs //= {};
+    $search_attrs->{rows} = 100 if $search_attrs->{rows} > 100;
 
-    return $self->search(
+    my $rs_ids = $self->search(
         $search,
+        {
+            select     => [ 'id' ],
+            order_by   => { -desc => 'me.id' },
+            cache      => 1,
+            rows       => 100,
+            page       => 1,
+            %$search_attrs,
+        }
+    );
+    
+    my $rs_urls = $self->search(
+        { 'me.id' => { -in => [$rs_ids->get_column('id')->all] } },
         {
             '+select'  => [ { count => 'hit.id' } ],
             '+as'      => [ 'hit_count' ],
             'join'     => [ 'hit' ],
             'group_by' => [ 'me.id' ],
-            order_by   => { -desc => 'me.id' },
-            cache      => 1,
-            rows       => 100,
-            page       => 1,
-            %$attrs,
+            %$fetch_attrs,
         }
     );
+    
+    return $rs_urls, $rs_ids->pager;
 }
 
 1;
