@@ -1,5 +1,5 @@
 % layout 'default';
 % title l('Last URLs');
 
-<h3><%= l('List of last [_1] short URLs generated', $rows) %></h3>
-%= include 'user/blocks/url_list', urls => $urls, hits => $hits, page => $page, pager => $pager, show_user => 1
+<h3><%= l('List of last [_1] short URLs generated', param('rows')) %></h3>
+%= include 'user/blocks/url_list', urls => $urls, page => param('page'), show_user => 1

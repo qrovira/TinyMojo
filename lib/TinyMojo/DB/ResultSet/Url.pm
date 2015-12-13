@@ -17,4 +17,26 @@ sub hits {
     });
 }
 
+sub urls_with_hits {
+    my ($self, $search, $attrs) = @_;
+
+    $attrs //= {};
+    $attrs->{rows} = 100 if $attrs->{rows} > 100;
+
+    return $self->search(
+        $search,
+        {
+            '+select'  => [ { count => 'hit.id' } ],
+            '+as'      => [ 'hit_count' ],
+            'join'     => [ 'hit' ],
+            'group_by' => [ 'me.id' ],
+            order_by   => { -desc => 'me.id' },
+            cache      => 1,
+            rows       => 100,
+            page       => 1,
+            %$attrs,
+        }
+    );
+}
+
 1;

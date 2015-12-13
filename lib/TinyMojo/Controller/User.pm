@@ -28,25 +28,15 @@ sub dashboard {
     my ($self) = @_;
     my $page = $self->param('page') // 1;
     my $rows = $self->param('rows') // 10;
-    $rows = 100 if $rows > 100;
 
-    my $urls = $self->db('Url')->search({
-        user_id => $self->session->{user}{id}
-    },{
-        order_by => { -desc => 'id' },
-        rows => $rows,
-        page => $page,
-        cache => 1,
-    });
-
-    my %hits = map { $_->url_id => $_->get_column('hits') } $urls->hits;
+    my $urls = $self->db('Url')->urls_with_hits(
+        { user_id => $self->session->{user}{id} },
+        { rows => $rows, page => $page }
+    );
 
     $self->stash(
-        urls => [ $urls->all ],
-        hits => \%hits,
+        urls => $urls,
         rows => $rows,
-        page => $page,
-        pager => $urls->pager,
     );
 }
 
