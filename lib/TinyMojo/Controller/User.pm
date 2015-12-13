@@ -15,8 +15,7 @@ sub check_auth {
 
     return 1 if $c->logged_in;
 
-    $c->bs_flash( danger => $c->l('Not authorized'), class => 'danger' );
-    $c->redirect_to('user#login');
+    $c->bs_flash_to( danger => $c->l('Not authorized'), 'user#login' );
 
     return undef;
 }
